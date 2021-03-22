@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Watermelon
+  m_EditorClassIdentifier: 
+  EnName: Watermelon
+  ArName: "\u0628\u0637\u064A\u062E"
+  FrName: "Past\xE8que"
+  EnAudio: {fileID: 8300000, guid: e9988f5e2c86edf498f0966441d219e0, type: 3}
+  FrAudio: {fileID: 8300000, guid: 52aa129842035e2469d33a3d6294e543, type: 3}
+  ArAudio: {fileID: 8300000, guid: 74a3560aacc8bd540a2d04ba5b4606fc, type: 3}
+  prefabObject: {fileID: 1000011216760202, guid: 78a6a596f3cdc2641b44bb3d371c8db0,
+    type: 3}

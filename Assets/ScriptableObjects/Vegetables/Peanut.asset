@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Peanut
+  m_EditorClassIdentifier: 
+  EnName: Peanut
+  ArName: "\u0641\u0648\u0644 \u0633\u0648\u062F\u0627\u0646\u064A"
+  FrName: Arachide
+  EnAudio: {fileID: 8300000, guid: 3ac23e1bd17f2d4489c3cfdb336c6e37, type: 3}
+  FrAudio: {fileID: 8300000, guid: 9e398b6c0d4a9ab44b0f72c6d9a4de6f, type: 3}
+  ArAudio: {fileID: 8300000, guid: 72a63f08605604349807b0fdda2165a5, type: 3}
+  prefabObject: {fileID: 1329430274803916, guid: 8c8c7d8f829a2d24ebe78eddb5eaff57,
+    type: 3}

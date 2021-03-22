@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Apple
+  m_EditorClassIdentifier: 
+  EnName: Apple
+  ArName: "\u062A\u0641\u0627\u062D\u0629"
+  FrName: Pomme
+  EnAudio: {fileID: 8300000, guid: 9adfcf4a6f8b71648b858045d62805c8, type: 3}
+  FrAudio: {fileID: 8300000, guid: 4befdc8a22454584b85fbb645c49ed41, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989,
+    type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Pineapple
+  m_EditorClassIdentifier: 
+  EnName: Pineapple
+  ArName: "\u0623\u0646\u0627\u0646\u0627\u0633"
+  FrName: Ananas
+  EnAudio: {fileID: 8300000, guid: 09a53f14cd9b5e742bd4a8c9efdc1af9, type: 3}
+  FrAudio: {fileID: 8300000, guid: 2af6ea2d191cfa44383596107e29510f, type: 3}
+  ArAudio: {fileID: 8300000, guid: db55d3a9955219b4597ba7c9e104a1b2, type: 3}
+  prefabObject: {fileID: 1000010466361374, guid: 80c29c7e0bd64654f8f59dda85e24897,
+    type: 3}

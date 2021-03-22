@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Potato
+  m_EditorClassIdentifier: 
+  EnName: Potato
+  ArName: "\u0628\u0637\u0627\u0637\u0633"
+  FrName: Pomme de terre
+  EnAudio: {fileID: 8300000, guid: e6a1cce770d6be7418ad015846d3dbe8, type: 3}
+  FrAudio: {fileID: 8300000, guid: cec22f1310ad76e44a1d8c3681cdfd92, type: 3}
+  ArAudio: {fileID: 8300000, guid: ca8047d5c0e08114a90093efa2cb6d3b, type: 3}
+  prefabObject: {fileID: 1000010466361374, guid: 80c29c7e0bd64654f8f59dda85e24897,
+    type: 3}

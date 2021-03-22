@@ -1,0 +1,101 @@
+{
+    "m_SelectedDeviceId": "ce0318237cf454bb0c",
+    "m_SelectedPackage": {
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 20324,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 21713,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.microsoft.launcher",
+            "processId": 4980,
+            "exited": false
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 25044,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 26638,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 28420,
+            "exited": true
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 1,
+        "Behavior": 1
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

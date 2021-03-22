@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Peach
+  m_EditorClassIdentifier: 
+  EnName: Peach
+  ArName: "\u062E\u0648\u062E"
+  FrName: "P\xEAche"
+  EnAudio: {fileID: 8300000, guid: c4c637ce45c1f6045a7d502d04384ca6, type: 3}
+  FrAudio: {fileID: 8300000, guid: 4053ab36f3c0ad546bdb46eba79da368, type: 3}
+  ArAudio: {fileID: 8300000, guid: f50b9653083b6484084496d59220e383, type: 3}
+  prefabObject: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4,
+    type: 3}
