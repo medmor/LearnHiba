@@ -18,5 +18,5 @@ MonoBehaviour:
   EnAudio: {fileID: 8300000, guid: e6a1cce770d6be7418ad015846d3dbe8, type: 3}
   FrAudio: {fileID: 8300000, guid: cec22f1310ad76e44a1d8c3681cdfd92, type: 3}
   ArAudio: {fileID: 8300000, guid: ca8047d5c0e08114a90093efa2cb6d3b, type: 3}
-  prefabObject: {fileID: 1000010466361374, guid: 80c29c7e0bd64654f8f59dda85e24897,
+  prefabObject: {fileID: 1495518033309181662, guid: 5ee728a65b97b1849aa4906f0f1108f3,
     type: 3}

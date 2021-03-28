@@ -15,7 +15,8 @@ MonoBehaviour:
   EnName: Llama
   ArName: "\u0644\u0627\u0645\u0627"
   FrName: Lama
-  EnAudio: {fileID: 0}
-  FrAudio: {fileID: 0}
-  ArAudio: {fileID: 0}
-  prefabObject: {fileID: 0}
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 7725415189342734688, guid: 97896a0e3803df240b1d2122c6213967,
+    type: 3}

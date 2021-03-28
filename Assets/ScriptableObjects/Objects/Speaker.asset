@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Speaker
+  m_EditorClassIdentifier: 
+  EnName: Speaker
+  ArName: "\u0645\u0643\u0628\u0631 \u0627\u0644\u0635\u0648\u062A"
+  FrName: Haut-parleur
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 4457498053707510219, guid: 94c0ac0dcb2ba2e4b909500b7a8da19d,
+    type: 3}

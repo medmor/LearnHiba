@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
+  m_Name: Bear
+  m_EditorClassIdentifier: 
+  EnName: Bear
+  ArName: "\u062F\u0628"
+  FrName: Ourse
+  EnAudio: {fileID: 8300000, guid: ccad3c7ebbc1ad14780d1ba4f2e7bfe6, type: 3}
+  FrAudio: {fileID: 8300000, guid: 72f47ec193ddaa641a55abd201fc475e, type: 3}
+  ArAudio: {fileID: 8300000, guid: 71e87e7ffa755bc4a826ee2778cb3b16, type: 3}
+  prefabObject: {fileID: 9135908496785319846, guid: 68d82971d3888ad418fac85d068ea4fd,
+    type: 3}

@@ -15,7 +15,8 @@ MonoBehaviour:
   EnName: Sheep
   ArName: "\u062E\u0631\u0648\u0641"
   FrName: Mouton
-  EnAudio: {fileID: 0}
-  FrAudio: {fileID: 0}
-  ArAudio: {fileID: 0}
-  prefabObject: {fileID: 0}
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 1892672013005826217, guid: f3fc6c44384e2bb4585214748a648bfa,
+    type: 3}

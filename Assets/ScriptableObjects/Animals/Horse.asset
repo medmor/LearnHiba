@@ -15,7 +15,8 @@ MonoBehaviour:
   EnName: Horse
   ArName: "\u062D\u0635\u0627\u0646"
   FrName: Hourse
-  EnAudio: {fileID: 0}
-  FrAudio: {fileID: 0}
-  ArAudio: {fileID: 0}
-  prefabObject: {fileID: 0}
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 5256940259395985730, guid: 468878e84e44d8941a1bf30cb4aab841,
+    type: 3}

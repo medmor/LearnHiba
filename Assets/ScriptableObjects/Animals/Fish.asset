@@ -15,7 +15,8 @@ MonoBehaviour:
   EnName: Fish
   ArName: "\u0633\u0645\u0643\u0629"
   FrName: Poisson
-  EnAudio: {fileID: 0}
-  FrAudio: {fileID: 0}
-  ArAudio: {fileID: 0}
-  prefabObject: {fileID: 0}
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 1280457537584576464, guid: fce2ae1920fe2774196ef39f3c162f8b,
+    type: 3}

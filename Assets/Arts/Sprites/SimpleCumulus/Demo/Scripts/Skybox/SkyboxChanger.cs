@@ -9,7 +9,6 @@ public class SkyboxChanger : MonoBehaviour
 
     private void Start()
     {
-        index = Random.Range(0, Skyboxes.Length);
         StartCoroutine(NextSkybox());
     }
 
@@ -23,8 +22,8 @@ public class SkyboxChanger : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(20);
-            ChangeSkybox(index++);
+            ChangeSkybox(Random.Range(0, Skyboxes.Length));
+            yield return new WaitForSeconds(60);
         }
     }
 }

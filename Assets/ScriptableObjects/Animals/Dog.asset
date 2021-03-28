@@ -15,7 +15,8 @@ MonoBehaviour:
   EnName: Dog
   ArName: "\u0643\u0644\u0628"
   FrName: Chien
-  EnAudio: {fileID: 0}
-  FrAudio: {fileID: 0}
-  ArAudio: {fileID: 0}
-  prefabObject: {fileID: 0}
+  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  prefabObject: {fileID: 8012443658383355158, guid: 00f0df48b9cc4db4c89231f883753b88,
+    type: 3}

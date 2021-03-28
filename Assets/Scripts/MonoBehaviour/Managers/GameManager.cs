@@ -13,7 +13,9 @@ public class GameManager : Manager<GameManager>
     public TextMesh EnName;
     public TextMesh FrName;
     public TextMesh ArName;
-    public GameObject ObjectToLearn;
+    private GameObject objectToLearn;
+
+    public Transform SpointPoint;
 
     void Start()
     {
@@ -34,20 +36,16 @@ public class GameManager : Manager<GameManager>
     void SetupScene()
     {
         var currentItem = ItemsToLearn[CurrentItemToLearnIndex];
-        Destroy(ObjectToLearn);
-        ObjectToLearn = Instantiate(currentItem.prefabObject);
-        if (!ObjectToLearn.GetComponent<ObjectClick>())
-            ObjectToLearn.AddComponent<ObjectClick>();
-        if (!ObjectToLearn.GetComponent<SphereCollider>())
-            ObjectToLearn.AddComponent<SphereCollider>();
-        if (!ObjectToLearn.GetComponent<Tween>())
-            ObjectToLearn.AddComponent<Tween>();
+        Destroy(objectToLearn);
+        objectToLearn = Instantiate(currentItem.prefabObject);
+        Resize(objectToLearn);
+        if (!objectToLearn.GetComponent<Tween>())
+            objectToLearn.AddComponent<Tween>();
         EnName.text = currentItem.EnName;
         FrName.text = currentItem.FrName;
         ArName.text = currentItem.ArName;
         ArName.text = ArabicFixer.Fix(currentItem.ArName);
     }
-
 
     void RandomItemToLearn()
     {
@@ -57,7 +55,7 @@ public class GameManager : Manager<GameManager>
 
     void NexItemToLearn()
     {
-        if(CurrentItemToLearnIndex < ItemsToLearn.Count - 1)
+        if (CurrentItemToLearnIndex < ItemsToLearn.Count - 1)
         {
             CurrentItemToLearnIndex++;
         }
@@ -80,6 +78,7 @@ public class GameManager : Manager<GameManager>
         }
         currentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
     }
+
     void OnSwip(SwipeData data)
     {
         if (SoundManager.Instance.IsSoundPlying())
@@ -97,5 +96,27 @@ public class GameManager : Manager<GameManager>
                 break;
         }
         SetupScene();
+    }
+
+    void Resize(GameObject obj)
+    {
+        var emptySize = .5;
+
+        var mf = obj.GetComponent<MeshRenderer>();
+
+        if (mf != null)
+        {
+            var bounds = mf.bounds;
+
+            var max = bounds.extents.x;
+            if (max < bounds.extents.y)
+                max = bounds.extents.y;
+            if (max < bounds.extents.z)
+                max = bounds.extents.z;
+            print(max);
+
+            var scale = (float)(emptySize * 0.5) / max;
+            transform.localScale = new Vector3(scale, scale, scale);
+        }
     }
 }
