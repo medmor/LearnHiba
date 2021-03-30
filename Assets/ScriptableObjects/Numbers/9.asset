@@ -15,8 +15,8 @@ MonoBehaviour:
   EnName: Nine
   ArName: "\u062A\u0633\u0639\u0629"
   FrName: Neuf
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  EnAudio: {fileID: 8300000, guid: 08eee3037d54a1d48a42aca6c1cab2d3, type: 3}
+  FrAudio: {fileID: 8300000, guid: 504e00f4090bd4a4b88e760e7f9a50ab, type: 3}
+  ArAudio: {fileID: 8300000, guid: 568d53b8a5af310439e254e1dfe924bf, type: 3}
   prefabObject: {fileID: 900576120073960212, guid: 693e7c57f9641a74b9dff21133a9ecef,
     type: 3}

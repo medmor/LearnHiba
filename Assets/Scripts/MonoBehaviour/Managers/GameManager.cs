@@ -38,7 +38,6 @@ public class GameManager : Manager<GameManager>
         var currentItem = ItemsToLearn[CurrentItemToLearnIndex];
         Destroy(objectToLearn);
         objectToLearn = Instantiate(currentItem.prefabObject);
-        Resize(objectToLearn);
         if (!objectToLearn.GetComponent<Tween>())
             objectToLearn.AddComponent<Tween>();
         EnName.text = currentItem.EnName;
@@ -113,7 +112,6 @@ public class GameManager : Manager<GameManager>
                 max = bounds.extents.y;
             if (max < bounds.extents.z)
                 max = bounds.extents.z;
-            print(max);
 
             var scale = (float)(emptySize * 0.5) / max;
             transform.localScale = new Vector3(scale, scale, scale);

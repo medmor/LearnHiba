@@ -3762,7 +3762,7 @@ public class LTRect : System.Object{
                     //this.rotation = 0.0f;
                     pivot = Vector2.zero;
                 }else{
-                    GUIUtility.RotateAroundPivot(rotation, pivot);
+                   GUIUtility.RotateAroundPivot(rotation, pivot);
                 }
             }
             if(alphaEnabled){
