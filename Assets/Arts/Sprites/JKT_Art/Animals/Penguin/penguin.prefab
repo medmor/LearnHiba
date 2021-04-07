@@ -1313,6 +1313,9 @@ GameObject:
   - component: {fileID: 9582806}
   - component: {fileID: 1501943961}
   - component: {fileID: 1501943962}
+  - component: {fileID: 1136558774}
+  - component: {fileID: 8358119063690967692}
+  - component: {fileID: 1136558777}
   m_Layer: 0
   m_Name: penguin
   m_TagString: Untagged
@@ -1370,6 +1373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8875f6fd4a44d45af85ab18f688a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetCursor: {fileID: 2800000, guid: 632c45048af3cff41a21bce8f8bb9867, type: 3}
+  PointerCursor: {fileID: 2800000, guid: 90ba72ba9694a144bbf6bc447c29ad43, type: 3}
 --- !u!195 &1501943962
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1392,6 +1397,48 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1136558774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510cb42eae3489478485f3d74a4e2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &8358119063690967692
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.794622
+  m_Height: 9.123299
+  m_Direction: 1
+  m_Center: {x: 0.19883847, y: 4.064208, z: -8.412945e-16}
+--- !u!54 &1136558777
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175374}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &193146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1594,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18bc602d2b3ad0247853ae9b57505136, type: 2}
+  - {fileID: 2100000, guid: b2b533c82df680444bf765522d03888c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CharacterMove : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     NavMeshAgent agent;
     Camera cam;
@@ -22,7 +22,6 @@ public class CharacterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         var ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit, LayerMask.GetMask("Walkable", "Walls")))

@@ -23,4 +23,9 @@ public class PuzzleText : MonoBehaviour
         }
     }
 
+    public char GetChar()
+    {
+        return texts[0].text[0];
+    }
+
 }

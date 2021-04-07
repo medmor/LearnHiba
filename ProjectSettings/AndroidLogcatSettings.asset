@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "ce0318237cf454bb0c",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "ce0318237cf454bb0c",
+        "name": "com.DefaultCompany.LearnHiba",
+        "processId": 22670,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,24 @@
             "name": "com.DefaultCompany.LearnHiba",
             "processId": 28420,
             "exited": true
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 18936,
+            "exited": false
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 20792,
+            "exited": false
+        },
+        {
+            "deviceId": "ce0318237cf454bb0c",
+            "name": "com.DefaultCompany.LearnHiba",
+            "processId": 22670,
+            "exited": false
         }
     ],
     "m_Tags": {
