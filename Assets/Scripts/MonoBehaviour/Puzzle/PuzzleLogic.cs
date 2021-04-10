@@ -22,6 +22,8 @@ public class PuzzleLogic : MonoBehaviour
     public GameObject textPerph;
     public GameObject wrongTextPerph;
 
+    public TMPro.TextMeshProUGUI TimerText;
+
     private List<Vector3> charsPositions = new List<Vector3>();
     private List<Vector3> wrongCharsPositions = new List<Vector3>();
 
@@ -31,15 +33,19 @@ public class PuzzleLogic : MonoBehaviour
     public Transform FrUITextContainer;
     public Transform EnUITextContainer;
 
+
     int score = 0;
+    NavMeshPath shortPath = default;
+    float totalDistance = 0;
+    float neededTime = 0;
 
     void Start()
     {
-        SetChars();
-        SetCharsPositions();
         SetUpScene();
+        StartCoroutine(Timer());
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
     }
+
     float GetPathRemainingDistance()
     {
         if (agent.pathPending ||
@@ -68,17 +74,6 @@ public class PuzzleLogic : MonoBehaviour
             chars.Add(c);
             foundChars.Add(false);
         }
-        foreach (var c in item.EnName)
-        {
-            var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (item.EnName.Contains(wrongChar.ToString()) || item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
-            {
-                wrongChar = allChars[Random.Range(0, allChars.Count)];
-            }
-            wrongChars.Add(wrongChar);
-            chars.Add(c);
-            foundChars.Add(false);
-        }
         foreach (var c in item.FrName)
         {
             var wrongChar = allChars[Random.Range(0, allChars.Count)];
@@ -90,41 +85,54 @@ public class PuzzleLogic : MonoBehaviour
             chars.Add(c);
             foundChars.Add(false);
         }
+        foreach (var c in item.EnName)
+        {
+            var wrongChar = allChars[Random.Range(0, allChars.Count)];
+            while (item.EnName.Contains(wrongChar.ToString()) || item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
+            {
+                wrongChar = allChars[Random.Range(0, allChars.Count)];
+            }
+            wrongChars.Add(wrongChar);
+            chars.Add(c);
+            foundChars.Add(false);
+        }
+    }
+    void CalculateShortPath()
+    {
+        shortPath = new NavMeshPath();
+        agent.CalculatePath(GoalPos.position, shortPath);
+        agent.SetPath(shortPath);
+        agent.isStopped = true;
     }
     void SetCharsPositions()
     {
-        var path = new NavMeshPath();
-        agent.CalculatePath(GoalPos.position, path);
-        agent.SetPath(path);
-        agent.isStopped = true;
-
         var initialPos = StartPos.position;
-        var averageDist = GetPathRemainingDistance() / chars.Count;
+        var averageDist = totalDistance / chars.Count;
         var cornerIndex = 0;
-        var remainingDistToCorner = Vector3.Distance(initialPos, path.corners[cornerIndex]);
+        var remainingDistToCorner = Vector3.Distance(initialPos, shortPath.corners[cornerIndex]);
 
         for (int i = 0; i < chars.Count; i++)
         {
             var dist = averageDist;
-            while (remainingDistToCorner < dist && cornerIndex < path.corners.Length - 1)
+            while (remainingDistToCorner < dist && cornerIndex < shortPath.corners.Length - 1)
             {
                 dist -= remainingDistToCorner;
-                initialPos = path.corners[cornerIndex];
+                initialPos = shortPath.corners[cornerIndex];
                 cornerIndex++;
-                remainingDistToCorner = Vector3.Distance(initialPos, path.corners[cornerIndex]);
+                remainingDistToCorner = Vector3.Distance(initialPos, shortPath.corners[cornerIndex]);
             }
-            var dir = (path.corners[cornerIndex] - initialPos).normalized;
+            var dir = (shortPath.corners[cornerIndex] - initialPos).normalized;
             charsPositions.Add(initialPos + dir * dist);
             var wrongPos = new Vector3(charsPositions[i].x + Random.Range(-1f, 1f),
                 charsPositions[i].y, charsPositions[i].z + Random.Range(-1f, 1f));
             if (NavMesh.SamplePosition(wrongPos, out NavMeshHit hit, 1, NavMesh.GetAreaFromName("Not Walkable"))
-                && Vector3.Distance(hit.position, charsPositions[i])>.5f)
+                && Vector3.Distance(hit.position, charsPositions[i]) > .5f)
                 wrongCharsPositions.Add(hit.position);
             initialPos = charsPositions[i];
             remainingDistToCorner -= dist;
         }
     }
-    void SetUpScene()
+    void SpawnSharsInScene()
     {
         for (var i = 0; i < chars.Count; i++)
         {
@@ -137,15 +145,15 @@ public class PuzzleLogic : MonoBehaviour
                 txt = Instantiate(ArTextSlotPref);
                 txt.transform.SetParent(ArUITextContainer);
             }
-            else if (i < item.ArName.Length + item.EnName.Length)
+            else if (i < item.ArName.Length + item.FrName.Length)
             {
                 txt = Instantiate(EnTextSlotPref);
-                txt.transform.SetParent(EnUITextContainer);
+                txt.transform.SetParent(FrUITextContainer);
             }
             else
             {
                 txt = Instantiate(EnTextSlotPref);
-                txt.transform.SetParent(FrUITextContainer);
+                txt.transform.SetParent(EnUITextContainer);
             }
             txt.GetComponentInChildren<TextMeshProUGUI>().text = chars[i].ToString();
             UITexts.Add(txt);
@@ -157,6 +165,15 @@ public class PuzzleLogic : MonoBehaviour
                 txt.GetComponent<PuzzleText>().SetTexts(wrongChars[i].ToString());
             }
         }
+    }
+    void SetUpScene()
+    {
+        SetChars();
+        CalculateShortPath();
+        totalDistance = GetPathRemainingDistance();
+        CalculateNeededTime();
+        SetCharsPositions();
+        SpawnSharsInScene();
     }
     void OnPlayerCollideWhitheChar(GameObject obj)
     {
@@ -197,5 +214,23 @@ public class PuzzleLogic : MonoBehaviour
     void DecrementScore()
     {
         score--;
+    }
+    void CalculateNeededTime()
+    {
+        neededTime = totalDistance * agent.speed * 10;
+    }
+    IEnumerator Timer()
+    {
+        while (neededTime > 0)
+        {
+            System.TimeSpan t = System.TimeSpan.FromSeconds(neededTime);
+
+            string answer = string.Format("{0:D2}.{1:D2}",
+                            t.Minutes,
+                            t.Seconds);
+            neededTime -= 1f;
+            TimerText.text = answer;
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

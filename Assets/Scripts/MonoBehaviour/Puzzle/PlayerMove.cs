@@ -10,13 +10,14 @@ public class PlayerMove : MonoBehaviour
 
     public Texture2D TargetCursor;
     public Texture2D PointerCursor;
+    Vector3 targetRotationDirection;
 
-    private float remainingDistance;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         cam = Camera.main;
+        targetRotationDirection = transform.forward;
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     agent.isStopped = false;
                     agent.SetDestination(hit.point);
+                    targetRotationDirection = hit.point - transform.position;
                 }
             }
         }
@@ -45,7 +47,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         var remainingDist = GetPathRemainingDistance();
-        if (agent.isStopped || remainingDist == remainingDistance)
+        if (agent.isStopped || remainingDist == 0)
         {
             animator.SetFloat("Speed", 0);
         }
@@ -53,6 +55,9 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetFloat("Speed", 1);
         }
+
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetRotationDirection, Time.deltaTime, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
     float GetPathRemainingDistance()

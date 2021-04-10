@@ -4,8 +4,9 @@ using UnityEngine.Events;
 public class EventsManager : Manager<EventsManager>
 {
     internal PlayerCollideWithChar PlayerCollideWithChar;
-    private void Start()
+    public override void Awake()
     {
+        base.Awake();
         PlayerCollideWithChar = new PlayerCollideWithChar();
     }
 
