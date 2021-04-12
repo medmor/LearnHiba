@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Manager<GameManager>
 {
@@ -20,5 +21,11 @@ public class GameManager : Manager<GameManager>
             prefabInstance = Instantiate(SystemPrefabs[i]);
         }
     }
+
+    public void SwitchScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
 
 }

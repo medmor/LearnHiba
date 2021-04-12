@@ -183,7 +183,7 @@ public class PuzzleLogic : MonoBehaviour
             UITexts[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
             IncrementScore();
             if (!StillCharsToFind())
-                print("You Win");
+                GameManager.Instance.SwitchScene("Boot");
         }
         else
         {

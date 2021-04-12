@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8820452473817325658}
   - component: {fileID: 8820452473817325657}
   - component: {fileID: 2536989801049710314}
-  - component: {fileID: 501148450161564925}
   - component: {fileID: 626574079380926339}
   m_Layer: 0
   m_Name: ArName
@@ -111,18 +110,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8400002, y: 1.1171876, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &501148450161564925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8820452473817325656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b67962a1521cf724896b8a6c0cabd481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &626574079380926339
 MonoBehaviour:
   m_ObjectHideFlags: 0

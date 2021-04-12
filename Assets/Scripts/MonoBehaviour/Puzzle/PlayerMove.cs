@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, LayerMask.GetMask("Walkable", "Walls")))
         {
             if (hit.collider.gameObject.CompareTag("Walls"))
-                Cursor.SetCursor(PointerCursor, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             else
             {
 
@@ -43,7 +43,7 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            Cursor.SetCursor(PointerCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
 
         var remainingDist = GetPathRemainingDistance();

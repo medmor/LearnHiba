@@ -20,6 +20,7 @@ public class SimpleLearnLogic : MonoBehaviour
         RandomItemToLearn();
         SetupScene();
         InputManager.Instance.OnSwipe += OnSwip;
+        EventsManager.Instance.ItemToLearnClicked.AddListener(OnItemToLearnClicked);
     }
 
     void SetupScene()
@@ -85,5 +86,25 @@ public class SimpleLearnLogic : MonoBehaviour
         }
         SetupScene();
     }
+
+    void OnItemToLearnClicked(string lang)
+    {
+        if (lang == "en")
+            SoundManager.Instance.Play(currentItemToLearn.EnAudio);
+        else if (lang == "fr")
+            SoundManager.Instance.Play(currentItemToLearn.FrAudio);
+        else if (lang == "ar")
+            SoundManager.Instance.Play(currentItemToLearn.ArAudio);
+        else
+        {
+            var r = Random.Range(0f, 1f);
+            if (r < 0.33)
+                SoundManager.Instance.Play(currentItemToLearn.EnAudio);
+            else if (r < 0.66)
+                SoundManager.Instance.Play(currentItemToLearn.FrAudio);
+            else
+                SoundManager.Instance.Play(currentItemToLearn.ArAudio);
+        }
+        }
 
 }
