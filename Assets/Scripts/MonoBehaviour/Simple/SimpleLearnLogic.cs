@@ -1,7 +1,6 @@
-﻿using System.Collections;
+﻿using ArabicSupport;
 using System.Collections.Generic;
 using UnityEngine;
-using ArabicSupport;
 
 public class SimpleLearnLogic : MonoBehaviour
 {
@@ -106,6 +105,6 @@ public class SimpleLearnLogic : MonoBehaviour
             else
                 SoundManager.Instance.Play(currentItemToLearn.ArAudio);
         }
-        }
+    }
 
 }
