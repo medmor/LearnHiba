@@ -41,6 +41,8 @@ public class PuzzleLogic : MonoBehaviour
 
     void Start()
     {
+        //UnityEditor.AI.NavMeshBuilder.ClearAllNavMeshes();
+        //UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
         SetUpScene();
         StartCoroutine(Timer());
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);

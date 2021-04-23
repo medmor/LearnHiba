@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.168115, g: 0.6496747, b: 0.89468366, a: 1}
+  m_IndirectSpecularColor: {r: 0.10122833, g: 0.40218395, b: 0.5638723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -502,11 +502,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsToLearn:
-  - {fileID: 11400000, guid: 43f85d07fbe0d28479970bc45d6a3ec2, type: 2}
-  - {fileID: 11400000, guid: f91c010c8188bab4f8348e64908625d9, type: 2}
-  - {fileID: 11400000, guid: d393817f73339304f8fbacecb580a1bd, type: 2}
-  - {fileID: 11400000, guid: 7b6475c811d1a794691e15d0ac46b944, type: 2}
-  - {fileID: 11400000, guid: 73a89c114c73f344592cf73d0deabb50, type: 2}
+  - {fileID: 11400000, guid: c63afdc7a35b0544f8fb120e90835b81, type: 2}
+  - {fileID: 11400000, guid: c63afdc7a35b0544f8fb120e90835b81, type: 2}
+  - {fileID: 11400000, guid: 601bc0a51742dec4f94fb5e627d26006, type: 2}
+  - {fileID: 11400000, guid: 637b08aae27c19042875fe5e7dafc6d0, type: 2}
+  - {fileID: 11400000, guid: 52558a0dd3e5d5c4ebfb9fdc589add8e, type: 2}
+  - {fileID: 11400000, guid: 65c354e5bb0797147a78f4dbab1a6aa1, type: 2}
+  - {fileID: 11400000, guid: 2f4e1e50f414a9046808f855b93ce48f, type: 2}
+  - {fileID: 11400000, guid: b39add8f5887fdc47a883bbdea2980c1, type: 2}
+  - {fileID: 11400000, guid: 9c68d8de745ce3640b51b990a5d995ab, type: 2}
+  - {fileID: 11400000, guid: a10471c6d5d350442aac58e168d70708, type: 2}
+  - {fileID: 11400000, guid: e83bd8e4ae699be49b51235075057c27, type: 2}
+  - {fileID: 11400000, guid: 80dcc3639bc3f2a469255bcce7621b06, type: 2}
+  - {fileID: 11400000, guid: fa1569332ba29b44da00e638b8abd3ea, type: 2}
+  - {fileID: 11400000, guid: 6c4141e2215f8b341abbf15fbd0d9d00, type: 2}
+  - {fileID: 11400000, guid: 3fcf27453d1da3349bbca6d55f01cedb, type: 2}
+  - {fileID: 11400000, guid: 0d56846205e16414db4d3f03734d0315, type: 2}
+  - {fileID: 11400000, guid: 99f1656b22dc6824396a0b2e83b9c78d, type: 2}
+  - {fileID: 11400000, guid: 823089b6ffeae9f4890be4624f982f7f, type: 2}
+  - {fileID: 11400000, guid: 3d2d78dcd97838c468d3c7d85ddfe2cb, type: 2}
+  - {fileID: 11400000, guid: c8d663cf01400464289cb90ab87c6c6b, type: 2}
+  - {fileID: 11400000, guid: ca406dfbd763aa64e89aa7148c2e1f1d, type: 2}
+  - {fileID: 11400000, guid: fcb03a3b490ff6c498495e2f9b871134, type: 2}
+  - {fileID: 11400000, guid: ae5ea11b7e70b20428d922b8af8f135d, type: 2}
+  - {fileID: 11400000, guid: 04413b230392a9341a816c9076fdeab3, type: 2}
   EnName: {fileID: 1693299090}
   FrName: {fileID: 1236300509}
   ArName: {fileID: 683446739}

@@ -15,8 +15,8 @@ MonoBehaviour:
   EnName: Fox
   ArName: "\u062B\u0639\u0644\u0628"
   FrName: Renard
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  EnAudio: {fileID: 8300000, guid: a7fb5e0108b4df244bbd1ea5af59b4a0, type: 3}
+  FrAudio: {fileID: 8300000, guid: 0c307ab42c1def54a9e0f1a1c2b97d1f, type: 3}
+  ArAudio: {fileID: 8300000, guid: 2a8395ce809542a45b601b94c46a89bf, type: 3}
   prefabObject: {fileID: 1386297224171495465, guid: 37de4f8060aef85419b7f6607641348d,
     type: 3}

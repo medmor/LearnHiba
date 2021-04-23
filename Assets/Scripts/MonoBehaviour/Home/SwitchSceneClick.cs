@@ -6,6 +6,7 @@ using UnityEngine;
 public class SwitchSceneClick : MonoBehaviour
 {
     public string SceneName;
+
     private void OnMouseDown()
     {
         GameManager.Instance.SwitchScene(SceneName);

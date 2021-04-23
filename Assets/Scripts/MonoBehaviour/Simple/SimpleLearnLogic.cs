@@ -28,6 +28,7 @@ public class SimpleLearnLogic : MonoBehaviour
         var currentItem = ItemsToLearn[CurrentItemToLearnIndex];
         Destroy(objectToLearn);
         objectToLearn = Instantiate(currentItem.prefabObject);
+        objectToLearn.transform.position = SpointPoint.position;
         if (!objectToLearn.GetComponent<Tween>())
             objectToLearn.AddComponent<Tween>();
         EnName.text = currentItem.EnName;

@@ -15,8 +15,8 @@ MonoBehaviour:
   EnName: Frog
   ArName: "\u0636\u0641\u062F\u0639"
   FrName: Grenouille
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
+  EnAudio: {fileID: 8300000, guid: 578fa04d99569c442b1b9293f71706bd, type: 3}
+  FrAudio: {fileID: 8300000, guid: 7f4a41bcb9cf80e448beb92e8f2cde68, type: 3}
+  ArAudio: {fileID: 8300000, guid: 7554604a2587a1a47955cf64c9cea60f, type: 3}
   prefabObject: {fileID: 3984653212299300358, guid: e942a21532baf0c41b030bc0bf41b043,
     type: 3}
