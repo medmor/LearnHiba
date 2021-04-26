@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10122833, g: 0.40218395, b: 0.5638723, a: 1}
+  m_IndirectSpecularColor: {r: 0.13614942, g: 0.5229115, b: 0.7232057, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: m_FontSize
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8820452473817325658, guid: 5cb0db24cb7b02f4681c3695c43aaba3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d0137dcb28f23b48afd97e79d70ae8e, type: 3}
     - target: {fileID: 8820452473817325659, guid: 5cb0db24cb7b02f4681c3695c43aaba3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -616,6 +621,11 @@ PrefabInstance:
       propertyPath: m_FontSize
       value: 115
       objectReference: {fileID: 0}
+    - target: {fileID: 8749542153097510923, guid: 3c21fa3eb6dfbe94abf8f89c5b27ca80,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d0137dcb28f23b48afd97e79d70ae8e, type: 3}
     m_RemovedComponents:
     - {fileID: 6389284938028558497, guid: 3c21fa3eb6dfbe94abf8f89c5b27ca80, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c21fa3eb6dfbe94abf8f89c5b27ca80, type: 3}
@@ -746,12 +756,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4d0e0ffc7a6c1bf44b435e0b23260f8c, type: 2}
   - {fileID: 2100000, guid: f9c898edef9d7b64f89790e4c635834d, type: 2}
   - {fileID: 2100000, guid: 187c15a21fc7f2346a831d66b7b247cb, type: 2}
-  - {fileID: 2100000, guid: 24c5d5aed6fb04645a8a99894ef1beae, type: 2}
-  - {fileID: 2100000, guid: 00335061f55411f49b0d0eaa9150f4b2, type: 2}
-  - {fileID: 2100000, guid: 364641eb7d92a7f4b9ebd78b0d887aad, type: 2}
-  - {fileID: 2100000, guid: 84db88626c4e4d14da132a180ec148dc, type: 2}
-  - {fileID: 2100000, guid: 53de9a2fa60cfae4a9eb04ff616a141a, type: 2}
-  - {fileID: 2100000, guid: 2cd58da722439c04fb4fc8c4c22e6c15, type: 2}
   - {fileID: 2100000, guid: 0a6a46f3bb9d1444ca868d6ee739340a, type: 2}
 --- !u!124 &1333415478
 Behaviour:
@@ -894,6 +898,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1824783920806744112, guid: 6340ef7d740f080478f4b5b5f30c12eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d0137dcb28f23b48afd97e79d70ae8e, type: 3}
     - target: {fileID: 1824783920806744113, guid: 6340ef7d740f080478f4b5b5f30c12eb,
         type: 3}
       propertyPath: m_FontSize

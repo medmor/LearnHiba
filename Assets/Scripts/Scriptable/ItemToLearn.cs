@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(fileName ="ItemToLearn",menuName ="ItemToLearn")]
+[CreateAssetMenu(fileName = "ItemToLearn", menuName = "ItemToLearn")]
 public class ItemToLearn : ScriptableObject
 {
     public string EnName;
     public string ArName;
     public string FrName;
-    public AudioClip EnAudio;
-    public AudioClip FrAudio;
-    public AudioClip ArAudio;
-    public GameObject prefabObject;
+    [HideInInspector]
+    public AudioClip EnAudio = default;
+    [HideInInspector]
+    public AudioClip FrAudio = default;
+    [HideInInspector]
+    public AudioClip ArAudio = default;
+    //private GameObject prefabObject = default;
+
 }
