@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle4.unity
     guid: 4f1322002889e4447bc4745a0b8a2ef5
+  - enabled: 1
+    path: Assets/Scenes/Gameover.unity
+    guid: c3549af0f53fc414bbe98214a3e7ef51
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 6b72bb15e2e63ce49a7bf492b744e28d
   m_configObjects: {}
