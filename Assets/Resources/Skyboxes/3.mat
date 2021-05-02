@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SimpleCumulus_Gradient_10
+  m_Name: 3
   m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BackTex:
-        m_Texture: {fileID: 2800000, guid: 15dd058218d5bfe4081204fc90801942, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9b30d1e766719f641820db995617b4ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DownTex:
-        m_Texture: {fileID: 2800000, guid: 835f02f0b8fb631439048adbc1b4e752, type: 3}
+        m_Texture: {fileID: 2800000, guid: a4a833ffc9f9a5047aff1fc90ed2f36b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,11 +48,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: 9073b2624722c5d499f97f108ab7f9aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1377cda2b5f87be4c867911b2cdfc081, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: 0846b970f848c0749a616abceeae6091, type: 3}
+        m_Texture: {fileID: 2800000, guid: caf80bc6aa5aad046aee88f70f187bf9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -72,7 +72,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RightTex:
-        m_Texture: {fileID: 2800000, guid: 91f32aa6950216a42b3f2af3d4fc2a8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 95e97ee0083b8ab4c8d51e5fedfe0963, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
-        m_Texture: {fileID: 2800000, guid: 8191777527b3acf4e95b303f7f7cb5c3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b208951c72f9f04c834932ea1fb72be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -94,7 +94,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 16.375498
+    - _Rotation: 15.0334425
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

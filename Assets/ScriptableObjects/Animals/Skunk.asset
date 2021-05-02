@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Skunk
   m_EditorClassIdentifier: 
-  EnName: Slunk
+  EnName: Skunk
   ArName: "\u0638\u0631\u0628\u0627\u0646"
   FrName: Mouffette
   EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
   FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
   ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 4465290101244519764, guid: 0a8e8abb9c358fd449151a472502a3e1,
-    type: 3}

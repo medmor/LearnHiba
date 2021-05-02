@@ -5,7 +5,7 @@ using UnityEngine;
 public class SimpleLearnLogic : MonoBehaviour
 {
     private int CurrentItemToLearnIndex;
-    internal ItemToLearn currentItemToLearn { get { return ItemsToLearn[CurrentItemToLearnIndex]; } private set { } }
+    internal ItemToLearn CurrentItemToLearn { get { return ItemsToLearn[CurrentItemToLearnIndex]; } private set { } }
     public List<ItemToLearn> ItemsToLearn;
 
     public TextMesh EnName;
@@ -26,7 +26,10 @@ public class SimpleLearnLogic : MonoBehaviour
     {
         var currentItem = ItemsToLearn[CurrentItemToLearnIndex];
         Destroy(objectToLearn);
-        objectToLearn = Instantiate(currentItem.prefabObject);
+        objectToLearn = Instantiate(Resources.Load("ObjectsToLearn/Animals/" + currentItem.EnName)) as GameObject;
+        currentItem.EnAudio = Resources.Load<AudioClip>("Audios/Animals/" + currentItem.EnName + "/En" + currentItem.EnName);
+        currentItem.FrAudio = Resources.Load<AudioClip>("Audios/Animals/" + currentItem.EnName + "/Fr" + currentItem.EnName);
+        currentItem.ArAudio = Resources.Load<AudioClip>("Audios/Animals/" + currentItem.EnName + "/Ar" + currentItem.EnName);
         objectToLearn.transform.position = SpointPoint.position;
         if (!objectToLearn.GetComponent<Tween>())
             objectToLearn.AddComponent<Tween>();
@@ -39,7 +42,7 @@ public class SimpleLearnLogic : MonoBehaviour
     void RandomItemToLearn()
     {
         CurrentItemToLearnIndex = Random.Range(0, ItemsToLearn.Count - 1);
-        currentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
+        CurrentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
     }
 
     void NexItemToLearn()
@@ -52,7 +55,7 @@ public class SimpleLearnLogic : MonoBehaviour
         {
             CurrentItemToLearnIndex = 0;
         }
-        currentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
+        CurrentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
     }
 
     void PreviousItemToLearn()
@@ -65,7 +68,7 @@ public class SimpleLearnLogic : MonoBehaviour
         {
             CurrentItemToLearnIndex = ItemsToLearn.Count - 1;
         }
-        currentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
+        CurrentItemToLearn = ItemsToLearn[CurrentItemToLearnIndex];
     }
 
     void OnSwip(SwipeData data)
@@ -90,20 +93,20 @@ public class SimpleLearnLogic : MonoBehaviour
     void OnItemToLearnClicked(string lang)
     {
         if (lang == "en")
-            SoundManager.Instance.Play(currentItemToLearn.EnAudio);
+            SoundManager.Instance.Play(CurrentItemToLearn.EnAudio);
         else if (lang == "fr")
-            SoundManager.Instance.Play(currentItemToLearn.FrAudio);
+            SoundManager.Instance.Play(CurrentItemToLearn.FrAudio);
         else if (lang == "ar")
-            SoundManager.Instance.Play(currentItemToLearn.ArAudio);
+            SoundManager.Instance.Play(CurrentItemToLearn.ArAudio);
         else
         {
             var r = Random.Range(0f, 1f);
             if (r < 0.33)
-                SoundManager.Instance.Play(currentItemToLearn.EnAudio);
+                SoundManager.Instance.Play(CurrentItemToLearn.EnAudio);
             else if (r < 0.66)
-                SoundManager.Instance.Play(currentItemToLearn.FrAudio);
+                SoundManager.Instance.Play(CurrentItemToLearn.FrAudio);
             else
-                SoundManager.Instance.Play(currentItemToLearn.ArAudio);
+                SoundManager.Instance.Play(CurrentItemToLearn.ArAudio);
         }
     }
 
