@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-using TMPro;
 
 public class PuzzleLogic : MonoBehaviour
 {
@@ -13,10 +13,10 @@ public class PuzzleLogic : MonoBehaviour
     public ItemToLearn item;
     public NavMeshAgent agent;
 
-    private List<char> chars = new List<char>();
-    private List<bool> foundChars = new List<bool>();
-    private List<char> wrongChars = new List<char>();
-    private List<GameObject> UITexts = new List<GameObject>();
+    private readonly List<char> chars = new List<char>();
+    private readonly List<bool> foundChars = new List<bool>();
+    private readonly List<char> wrongChars = new List<char>();
+    private readonly List<GameObject> UITexts = new List<GameObject>();
     private readonly List<char> allChars = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'ا', 'ب', 'ج', 'د', 'ذ', 'ت', 'ث', 'س', 'ش', 'ز', 'ر', 'ض', 'ص', 'ق', 'ف', 'ع', 'غ', 'ه', 'خ', 'ح', 'ن', 'ل', 'م', 'ك', 'ط', 'و' };
 
     public GameObject textPerph;
@@ -24,25 +24,23 @@ public class PuzzleLogic : MonoBehaviour
 
     public TMPro.TextMeshProUGUI TimerText;
 
-    private List<Vector3> charsPositions = new List<Vector3>();
-    private List<Vector3> wrongCharsPositions = new List<Vector3>();
+    private readonly List<Vector3> charsPositions = new List<Vector3>();
+    private readonly List<Vector3> wrongCharsPositions = new List<Vector3>();
 
     public GameObject ArTextSlotPref;
     public GameObject EnTextSlotPref;
     public Transform ArUITextContainer;
     public Transform FrUITextContainer;
     public Transform EnUITextContainer;
+    public GameObject Hearts;
 
 
-    int score = 0;
     NavMeshPath shortPath = default;
     float totalDistance = 0;
     float neededTime = 0;
 
     void Start()
     {
-        //UnityEditor.AI.NavMeshBuilder.ClearAllNavMeshes();
-        //UnityEditor.AI.NavMeshBuilder.BuildNavMesh();
         SetUpScene();
         StartCoroutine(Timer());
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
@@ -183,14 +181,12 @@ public class PuzzleLogic : MonoBehaviour
         if (index > -1)
         {
             UITexts[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
-            IncrementScore();
             if (!StillCharsToFind())
-                GameManager.Instance.SwitchScene("Boot");
+                GameManager.Instance.SwitchScene("Win");
         }
         else
         {
-            print("Wrong char found");
-            DecrementScore();
+            DecrementHeart();
         }
     }
     int GetFoundCharIndex(char c)
@@ -209,13 +205,13 @@ public class PuzzleLogic : MonoBehaviour
     {
         return foundChars.Contains(false);
     }
-    void IncrementScore()
+    void DecrementHeart()
     {
-        score++;
-    }
-    void DecrementScore()
-    {
-        score--;
+        var heartsNumber = Hearts.transform.childCount - 1;
+        Destroy(Hearts.transform.GetChild(Hearts.transform.childCount - 1).gameObject);
+        if (heartsNumber == 0)
+            GameManager.Instance.SwitchScene("gameover");
+
     }
     void CalculateNeededTime()
     {

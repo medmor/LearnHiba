@@ -15,8 +15,3 @@ MonoBehaviour:
   EnName: Bear
   ArName: "\u062F\u0628"
   FrName: Ourse
-  EnAudio: {fileID: 8300000, guid: ccad3c7ebbc1ad14780d1ba4f2e7bfe6, type: 3}
-  FrAudio: {fileID: 8300000, guid: 72f47ec193ddaa641a55abd201fc475e, type: 3}
-  ArAudio: {fileID: 8300000, guid: 71e87e7ffa755bc4a826ee2778cb3b16, type: 3}
-  prefabObject: {fileID: 9135908496785319846, guid: 68d82971d3888ad418fac85d068ea4fd,
-    type: 3}

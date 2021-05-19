@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 4d0e0ffc7a6c1bf44b435e0b23260f8c, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f9c898edef9d7b64f89790e4c635834d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 346638475}
   - component: {fileID: 346638474}
   m_Layer: 0
-  m_Name: Simple
+  m_Name: Names
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Simple
+  m_text: Names
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c861cbad2862a343bb56239c9c9f628, type: 2}
   m_sharedMaterial: {fileID: 2604307009338772303, guid: 7c861cbad2862a343bb56239c9c9f628,
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.95, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 5.532, y: 1.236}
+  m_SizeDelta: {x: 7.1648083, y: 2.5271645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346638474
 MonoBehaviour:
@@ -633,8 +633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: -5.524, y: 1.384}
+  m_SizeDelta: {x: 6.7526684, y: 2.2327795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174165201
 MonoBehaviour:
