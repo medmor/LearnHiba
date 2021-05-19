@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : Manager<InputManager>
 {
@@ -87,13 +88,16 @@ public class InputManager : Manager<InputManager>
 
     private void SendSwipe(SwipeDirection direction)
     {
-        SwipeData swipeData = new SwipeData()
+        if (SceneManager.GetActiveScene().name == "SimpleLearn")
         {
-            Direction = direction,
-            StartPosition = fingerDownPosition,
-            EndPosition = fingerUpPosition
-        };
-        OnSwipe(swipeData);
+            SwipeData swipeData = new SwipeData()
+            {
+                Direction = direction,
+                StartPosition = fingerDownPosition,
+                EndPosition = fingerUpPosition
+            };
+            OnSwipe(swipeData);
+        }
     }
 }
 

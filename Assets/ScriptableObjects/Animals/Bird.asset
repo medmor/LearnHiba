@@ -15,8 +15,3 @@ MonoBehaviour:
   EnName: Bird
   ArName: "\u0639\u0635\u0641\u0648\u0631"
   FrName: Oiseau
-  EnAudio: {fileID: 8300000, guid: 4aad5a4a01825eb4fae021bba9e4af6d, type: 3}
-  FrAudio: {fileID: 8300000, guid: 31a68cf4e378e3648b0c1bcac713fd3b, type: 3}
-  ArAudio: {fileID: 8300000, guid: 5de24fae930416448a3f354f62f7347d, type: 3}
-  prefabObject: {fileID: 8091804076446851750, guid: c7fffb0035ba41645991092dd50229df,
-    type: 3}
