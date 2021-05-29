@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4635515559360632}
   - component: {fileID: 33660874149414388}
   - component: {fileID: 23053647269642574}
-  - component: {fileID: 7147924628933549987}
-  - component: {fileID: 7406374493871849331}
+  - component: {fileID: -4689444692123650710}
   m_Layer: 0
   m_Name: peach
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7147924628933549987
-SphereCollider:
+--- !u!65 &-4689444692123650710
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,17 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.008151753
-  m_Center: {x: 0.0010625503, y: 0.00045279355, z: 0.0000000018558984}
---- !u!114 &7406374493871849331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541859410316496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b350680a6f019a34e8ae32a2385c5dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.016303506, y: 0.015081172, z: 0.016258413}
+  m_Center: {x: 0.0010625503, y: 0.00045279358, z: 0.000000001890984}

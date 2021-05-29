@@ -15,7 +15,7 @@ public class InputManager : Manager<InputManager>
 
     public event Action<SwipeData> OnSwipe = delegate { };
 
-    private void Update()
+    public void Update()
     {
         foreach (Touch touch in Input.touches)
         {
@@ -88,7 +88,7 @@ public class InputManager : Manager<InputManager>
 
     private void SendSwipe(SwipeDirection direction)
     {
-        if (SceneManager.GetActiveScene().name == "SimpleLearn")
+        if (SceneManager.GetActiveScene().name == "NamesLearn")
         {
             SwipeData swipeData = new SwipeData()
             {
@@ -98,6 +98,10 @@ public class InputManager : Manager<InputManager>
             };
             OnSwipe(swipeData);
         }
+    }
+    public void ClearOnSwipListners()
+    {
+        OnSwipe = null;
     }
 }
 

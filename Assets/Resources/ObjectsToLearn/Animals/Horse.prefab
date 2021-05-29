@@ -742,6 +742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4881822816805010424}
+  - component: {fileID: 5591292118863505814}
   m_Layer: 0
   m_Name: Horse
   m_TagString: Untagged
@@ -757,7 +758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5256940259395985730}
   m_LocalRotation: {x: 0.026057258, y: 0.95454395, z: -0.0055314703, w: 0.29687756}
-  m_LocalPosition: {x: -0.49997327, y: -3.9810257, z: 0.2926359}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4543959049890491238}
@@ -765,6 +766,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1.492, y: 145.482, z: 2.664}
+--- !u!65 &5591292118863505814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256940259395985730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3972054, y: 7.000046, z: 9.123922}
+  m_Center: {x: 0.09145613, y: 1.458878, z: 0.44006371}
 --- !u!1 &5405259574932074321
 GameObject:
   m_ObjectHideFlags: 0

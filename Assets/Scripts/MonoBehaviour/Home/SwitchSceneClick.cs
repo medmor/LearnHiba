@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
 public class SwitchSceneClick : MonoBehaviour
 {
     public string SceneName;
 
-    private void OnMouseDown()
+    public void SwitchScene(string SceneName)
     {
         GameManager.Instance.SwitchScene(SceneName);
     }

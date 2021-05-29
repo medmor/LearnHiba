@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4584547189406814}
   - component: {fileID: 33770515996130108}
   - component: {fileID: 23687049907564026}
-  - component: {fileID: 7663533699686468860}
-  - component: {fileID: 5818826277854701972}
+  - component: {fileID: 8277604528053272835}
   m_Layer: 0
   m_Name: peanut
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7663533699686468860
-SphereCollider:
+--- !u!65 &8277604528053272835
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,17 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.009783749
+  m_Size: {x: 0.009677198, y: 0.008380701, z: 0.019567497}
   m_Center: {x: -3.5681888e-17, y: -4.656614e-10, z: -1.2987149e-17}
---- !u!114 &5818826277854701972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329430274803916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b350680a6f019a34e8ae32a2385c5dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

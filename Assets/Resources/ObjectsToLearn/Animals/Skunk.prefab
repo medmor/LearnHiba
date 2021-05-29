@@ -935,6 +935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724482177038218691}
+  - component: {fileID: 3290170911769018322}
   m_Layer: 0
   m_Name: Skunk
   m_TagString: Untagged
@@ -950,13 +951,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4465290101244519764}
   m_LocalRotation: {x: -0.05243408, y: 0.95501477, z: -0.08713538, w: -0.2785765}
-  m_LocalPosition: {x: 0.11657652, y: -3.258718, z: 0.11543226}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 7470056458931906655}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 11.282, y: 212.226, z: -3.016}
+--- !u!65 &3290170911769018322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465290101244519764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13045767, y: 0.13673276, z: 0.6275131}
+  m_Center: {x: 0.006012555, y: 0.077784255, z: -0.09701254}
 --- !u!1 &4719809476882016959
 GameObject:
   m_ObjectHideFlags: 0

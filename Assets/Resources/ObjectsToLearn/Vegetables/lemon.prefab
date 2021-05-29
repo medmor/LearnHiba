@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4496477937946058}
   - component: {fileID: 33505135154611496}
   - component: {fileID: 23923918548762266}
-  - component: {fileID: 8469930039007624398}
-  - component: {fileID: 6026309379164141999}
+  - component: {fileID: -5705399830556013009}
   m_Layer: 0
   m_Name: lemon
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8469930039007624398
-SphereCollider:
+--- !u!65 &-5705399830556013009
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,17 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.008218134
+  m_Size: {x: 0.016436268, y: 0.01263124, z: 0.015860565}
   m_Center: {x: -0.00006829945, y: 0.00026103418, z: -1.6866357e-11}
---- !u!114 &6026309379164141999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638444836145330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b350680a6f019a34e8ae32a2385c5dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

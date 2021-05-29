@@ -983,6 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952960255619634138}
+  - component: {fileID: 105388673840746367}
   m_Layer: 0
   m_Name: Llama
   m_TagString: Untagged
@@ -998,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7725415189342734688}
   m_LocalRotation: {x: 0.007187797, y: 0.9861681, z: -0.026953854, w: 0.1633842}
-  m_LocalPosition: {x: -0.1, y: -4.1, z: 0.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2075374176850789188}
@@ -1006,6 +1007,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.182, y: 161.194, z: 0.308}
+--- !u!65 &105388673840746367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725415189342734688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6433994, y: 5.881599, z: 4.8404093}
+  m_Center: {x: 0.012039799, y: 1.4168439, z: 0.39888734}
 --- !u!1 &7907255530402188524
 GameObject:
   m_ObjectHideFlags: 0

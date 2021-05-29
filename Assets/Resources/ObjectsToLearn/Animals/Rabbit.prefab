@@ -702,6 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4677745771901032}
   - component: {fileID: 95674028643950644}
+  - component: {fileID: 1285587958122864722}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Untagged
@@ -717,7 +718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588090451174212}
   m_LocalRotation: {x: 0, y: 0.953717, z: 0, w: 0.30070582}
-  m_LocalPosition: {x: 0, y: -3.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4136954610420946}
@@ -745,6 +746,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1285587958122864722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588090451174212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5775048, y: 0.7244749, z: 0.9882875}
+  m_Center: {x: 0.0000205161, y: 0.36581177, z: 0.058566533}
 --- !u!1 &1593323770353162
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4863069348827460}
   - component: {fileID: 33467545753722788}
   - component: {fileID: 23644498670348300}
-  - component: {fileID: 1502478134602492872}
+  - component: {fileID: 5745206475083033927}
   m_Layer: 0
   m_Name: strawberry
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1502478134602492872
-SphereCollider:
+--- !u!65 &5745206475083033927
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,5 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.007963534
+  m_Size: {x: 0.012801479, y: 0.012824235, z: 0.015927069}
   m_Center: {x: 0.000096026124, y: -0.00002008816, z: -4.617008e-10}
