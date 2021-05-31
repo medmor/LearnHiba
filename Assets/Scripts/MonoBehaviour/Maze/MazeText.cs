@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleText : MonoBehaviour
+public class MazeText : MonoBehaviour
 {
 
     public TextMesh[] texts;

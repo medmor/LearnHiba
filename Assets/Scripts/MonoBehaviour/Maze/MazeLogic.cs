@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PuzzleLogic : MonoBehaviour
+public class MazeLogic : MonoBehaviour
 {
     public Transform StartPos;
     public Transform GoalPos;
 
-    public ItemToLearn item;
-    public NavMeshAgent agent;
+    public ItemsToLearnLists Items;
+    [HideInInspector]
+    public ItemToLearn Item;
 
-    private readonly List<char> chars = new List<char>();
-    private readonly List<bool> foundChars = new List<bool>();
-    private readonly List<char> wrongChars = new List<char>();
-    private readonly List<GameObject> UITexts = new List<GameObject>();
-    private readonly List<char> allChars = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'ا', 'ب', 'ج', 'د', 'ذ', 'ت', 'ث', 'س', 'ش', 'ز', 'ر', 'ض', 'ص', 'ق', 'ف', 'ع', 'غ', 'ه', 'خ', 'ح', 'ن', 'ل', 'م', 'ك', 'ط', 'و' };
+    public NavMeshAgent agent;
 
     public GameObject textPerph;
     public GameObject wrongTextPerph;
 
     public TMPro.TextMeshProUGUI TimerText;
-
-    private readonly List<Vector3> charsPositions = new List<Vector3>();
-    private readonly List<Vector3> wrongCharsPositions = new List<Vector3>();
 
     public GameObject ArTextSlotPref;
     public GameObject EnTextSlotPref;
@@ -34,16 +29,42 @@ public class PuzzleLogic : MonoBehaviour
     public Transform EnUITextContainer;
     public GameObject Hearts;
 
+    private readonly List<char> chars = new List<char>();
+    private readonly List<bool> foundChars = new List<bool>();
+    private readonly List<char> wrongChars = new List<char>();
+    private readonly List<GameObject> UITexts = new List<GameObject>();
+    private readonly List<char> allChars = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'ا', 'ب', 'ج', 'د', 'ذ', 'ت', 'ث', 'س', 'ش', 'ز', 'ر', 'ض', 'ص', 'ق', 'ف', 'ع', 'غ', 'ه', 'خ', 'ح', 'ن', 'ل', 'م', 'ك', 'ط', 'و' };
 
-    NavMeshPath shortPath = default;
-    float totalDistance = 0;
-    float neededTime = 0;
+    private readonly List<Vector3> charsPositions = new List<Vector3>();
+    private readonly List<Vector3> wrongCharsPositions = new List<Vector3>();
+
+    private NavMeshPath shortPath = default;
+    private float totalDistance = 0;
+    private float neededTime = 0;
 
     void Start()
     {
+        ChooseItemToLearn();
         SetUpScene();
         StartCoroutine(Timer());
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MazeCompleted();
+        }
+    }
+
+    void ChooseItemToLearn()
+    {
+        var usedItems = ProgressManager.Instance.GetIMazeItemsToLearn();
+
+        if (usedItems.Count == Items.RandomCombinedList.Count)
+            Item = Items.RandomCombinedList[new System.Random().Next(usedItems.Count)];
+        else
+            Item = Items.RandomCombinedList[usedItems.Count == 0 ? 0 : usedItems.Count - 1];
     }
 
     float GetPathRemainingDistance()
@@ -63,10 +84,10 @@ public class PuzzleLogic : MonoBehaviour
     }
     void SetChars()
     {
-        foreach (var c in item.ArName)
+        foreach (var c in Item.ArName)
         {
             var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (item.ArName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
+            while (Item.ArName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
             {
                 wrongChar = allChars[Random.Range(0, allChars.Count)];
             }
@@ -74,10 +95,10 @@ public class PuzzleLogic : MonoBehaviour
             chars.Add(c);
             foundChars.Add(false);
         }
-        foreach (var c in item.FrName)
+        foreach (var c in Item.FrName)
         {
             var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (item.EnName.Contains(wrongChar.ToString()) || item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
+            while (Item.EnName.Contains(wrongChar.ToString()) || Item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
             {
                 wrongChar = allChars[Random.Range(0, allChars.Count)];
             }
@@ -85,10 +106,10 @@ public class PuzzleLogic : MonoBehaviour
             chars.Add(c);
             foundChars.Add(false);
         }
-        foreach (var c in item.EnName)
+        foreach (var c in Item.EnName)
         {
             var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (item.EnName.Contains(wrongChar.ToString()) || item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
+            while (Item.EnName.Contains(wrongChar.ToString()) || Item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
             {
                 wrongChar = allChars[Random.Range(0, allChars.Count)];
             }
@@ -138,14 +159,14 @@ public class PuzzleLogic : MonoBehaviour
         {
             var txt = Instantiate(textPerph);
             txt.transform.position = charsPositions[i] + Vector3.up * .05f;
-            txt.GetComponent<PuzzleText>().SetTexts(chars[i].ToString());
+            txt.GetComponent<MazeText>().SetTexts(chars[i].ToString());
 
-            if (i < item.ArName.Length)
+            if (i < Item.ArName.Length)
             {
                 txt = Instantiate(ArTextSlotPref);
                 txt.transform.SetParent(ArUITextContainer);
             }
-            else if (i < item.ArName.Length + item.FrName.Length)
+            else if (i < Item.ArName.Length + Item.FrName.Length)
             {
                 txt = Instantiate(EnTextSlotPref);
                 txt.transform.SetParent(FrUITextContainer);
@@ -162,7 +183,7 @@ public class PuzzleLogic : MonoBehaviour
             {
                 txt = Instantiate(wrongTextPerph);
                 txt.transform.position = wrongCharsPositions[i] + Vector3.up * .05f;
-                txt.GetComponent<PuzzleText>().SetTexts(wrongChars[i].ToString());
+                txt.GetComponent<MazeText>().SetTexts(wrongChars[i].ToString());
             }
         }
     }
@@ -177,17 +198,26 @@ public class PuzzleLogic : MonoBehaviour
     }
     void OnPlayerCollideWhitheChar(GameObject obj)
     {
-        var index = GetFoundCharIndex(obj.GetComponent<PuzzleText>().GetChar());
+        var index = GetFoundCharIndex(obj.GetComponent<MazeText>().GetChar());
         if (index > -1)
         {
             UITexts[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
             if (!StillCharsToFind())
-                GameManager.Instance.SwitchScene("Win");
+            {
+                MazeCompleted();
+            }
         }
         else
         {
             DecrementHeart();
         }
+    }
+    void MazeCompleted()
+    {
+        ProgressManager.Instance.AddMazeItemToLearn(Item.EnName);
+        ProgressManager.Instance.AddCompletedMaze(
+           int.Parse(SceneManager.GetActiveScene().name.Substring(4)) + 1 + ":0");
+        GameManager.Instance.SwitchScene("MazeChoice");
     }
     int GetFoundCharIndex(char c)
     {

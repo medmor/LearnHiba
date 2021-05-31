@@ -191,7 +191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38188989}
-  m_LocalRotation: {x: 2.8510843e-16, y: 0.831186, z: -4.2622396e-16, w: 0.55599445}
+  m_LocalRotation: {x: -2.8510843e-16, y: 0.831186, z: 4.2622396e-16, w: 0.55599445}
   m_LocalPosition: {x: -3.3077078, y: 0.2, z: 2.9776962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1673,7 +1673,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263293530}
-  m_LocalRotation: {x: 2.8510843e-16, y: 0.831186, z: -4.2622396e-16, w: 0.55599445}
+  m_LocalRotation: {x: -2.8510843e-16, y: 0.831186, z: 4.2622396e-16, w: 0.55599445}
   m_LocalPosition: {x: -3.3077078, y: 0.2, z: 2.9776962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15375,7 +15375,7 @@ GameObject:
   - component: {fileID: 730177031}
   - component: {fileID: 730177030}
   m_Layer: 0
-  m_Name: PuzzleLogic
+  m_Name: MazeLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15395,7 +15395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPos: {fileID: 1501943959}
   GoalPos: {fileID: 1288213439}
-  item: {fileID: 11400000, guid: 92becd707971c7d4f902599875d5cb18, type: 2}
+  Items: {fileID: 11400000, guid: 8010d8eb344cf4b4abaa54d8d5c3490f, type: 2}
+  Item: {fileID: 0}
   agent: {fileID: 2147023768}
   textPerph: {fileID: 152240065910521487, guid: 7f6763d28cbceee47970d2df4ffaf2f3,
     type: 3}

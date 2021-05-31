@@ -1,7 +1,7 @@
 ﻿using ArabicSupport;
 using UnityEngine;
 
-public class NamesLearn : MonoBehaviour
+public class NamesLearnLogic : MonoBehaviour
 {
     public ItemsToLearnLists Lists;
 
@@ -118,15 +118,15 @@ public class NamesLearn : MonoBehaviour
         }
     }
 
-    private float GetScaleCoefitient()
-    {
-        var clickableBox = ClickableArea.GetComponent<BoxCollider>();
-        var objectBox = objectToLearn.GetComponent<BoxCollider>();
-        var xScale = clickableBox.size.x / objectBox.size.x;
-        var yScale = clickableBox.size.y / objectBox.size.y;
-        var zScale = clickableBox.size.z / objectBox.size.z;
-        return Mathf.Max(xScale, Mathf.Max(yScale, zScale));
-    }
+    //private float GetScaleCoefitient()
+    //{
+    //    var clickableBox = ClickableArea.GetComponent<BoxCollider>();
+    //    var objectBox = objectToLearn.GetComponent<BoxCollider>();
+    //    var xScale = clickableBox.size.x / objectBox.size.x;
+    //    var yScale = clickableBox.size.y / objectBox.size.y;
+    //    var zScale = clickableBox.size.z / objectBox.size.z;
+    //    return Mathf.Max(xScale, Mathf.Max(yScale, zScale));
+    //}
 
     private void PivotTo(Transform tr, Vector3 position)
     {

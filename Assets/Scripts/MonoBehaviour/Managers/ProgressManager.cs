@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class ProgressManager : Manager<ProgressManager>
 {
-    public readonly string Maze = "maze";
+    public readonly string MazeProgressKey = "MazesProgress";
+    public readonly string MazeItemsToLearnKey = "MazeItemsToLearn";
+
     private List<string> MazeProgress = new List<string>();
+    private readonly List<string> MazeItemsToLearn = new List<string>();
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey(Maze))
-            MazeProgress = StringToList(GetMazeProgress());
+        if (PlayerPrefs.HasKey(MazeProgressKey))
+            MazeProgress = GetMazeProgress().Split(',').ToList();
         else
             ResetMazeProgress();
+        MazeProgress = MazeProgress.Distinct().ToList();
     }
 
     public void SetMazeProgress()
     {
-        PlayerPrefs.SetString(Maze, ListToString(MazeProgress));
+        PlayerPrefs.SetString(MazeProgressKey, string.Join(",", MazeProgress));
         PlayerPrefs.Save();
+    }
+
+    public void AddCompletedMaze(string completedMaze)
+    {
+        if (MazeProgress.Contains(completedMaze))
+            return;
+        MazeProgress.Add(completedMaze);
+        SetMazeProgress();
     }
 
     public string GetMazeProgress()
     {
-        return PlayerPrefs.GetString(Maze);
+        return PlayerPrefs.GetString(MazeProgressKey);
     }
-
 
     public void ResetMazeProgress()
     {
@@ -38,13 +49,20 @@ public class ProgressManager : Manager<ProgressManager>
         return mazeNumber > int.Parse(MazeProgress[MazeProgress.Count - 1].Split(':')[0]);
     }
 
-    private string ListToString(List<string> list)
+    public void AddMazeItemToLearn(string item)
     {
-        return string.Join(",", list);
+        this.MazeItemsToLearn.Add(item);
     }
 
-    private List<string> StringToList(string strList)
+    public List<string> GetIMazeItemsToLearn()
     {
-        return strList.Split(',').ToList();
+        return this.MazeItemsToLearn;
     }
+
+    public void ResetMazeItmsToLearn()
+    {
+        this.MazeItemsToLearn.Clear();
+    }
+
+
 }
