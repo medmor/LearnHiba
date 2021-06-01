@@ -81,8 +81,7 @@ public class NamesLearnLogic : MonoBehaviour
 
     void OnSwip(SwipeData data)
     {
-        if (SoundManager.Instance.IsSoundPlying())
-            SoundManager.Instance.Stop();
+        SoundManager.Instance.StopNamesAudioSource();
         var dir = data.Direction;
         switch (dir)
         {
@@ -101,20 +100,20 @@ public class NamesLearnLogic : MonoBehaviour
     void OnItemToLearnClicked(string lang)
     {
         if (lang == "en")
-            SoundManager.Instance.Play(enAudioClip);
+            SoundManager.Instance.PlayNames(enAudioClip);
         else if (lang == "fr")
-            SoundManager.Instance.Play(frAudioClip);
+            SoundManager.Instance.PlayNames(frAudioClip);
         else if (lang == "ar")
-            SoundManager.Instance.Play(arAudioClip);
+            SoundManager.Instance.PlayNames(arAudioClip);
         else
         {
             var r = Random.Range(0f, 1f);
             if (r < 0.33)
-                SoundManager.Instance.Play(enAudioClip);
+                SoundManager.Instance.PlayNames(enAudioClip);
             else if (r < 0.66)
-                SoundManager.Instance.Play(frAudioClip);
+                SoundManager.Instance.PlayNames(frAudioClip);
             else
-                SoundManager.Instance.Play(arAudioClip);
+                SoundManager.Instance.PlayNames(arAudioClip);
         }
     }
 

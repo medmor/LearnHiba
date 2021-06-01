@@ -10,7 +10,7 @@ public class ProgressManager : Manager<ProgressManager>
     private List<string> MazeProgress = new List<string>();
     private readonly List<string> MazeItemsToLearn = new List<string>();
 
-    private void Start()
+    public void Start()
     {
         if (PlayerPrefs.HasKey(MazeProgressKey))
             MazeProgress = GetMazeProgress().Split(',').ToList();

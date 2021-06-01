@@ -28,9 +28,10 @@ public class MazeLogic : MonoBehaviour
     public Transform FrUITextContainer;
     public Transform EnUITextContainer;
     public GameObject Hearts;
+    public Renderer FloorMeshMap;
 
     private readonly List<char> chars = new List<char>();
-    private readonly List<bool> foundChars = new List<bool>();
+    private readonly List<char> foundChars = new List<char>();
     private readonly List<char> wrongChars = new List<char>();
     private readonly List<GameObject> UITexts = new List<GameObject>();
     private readonly List<char> allChars = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'ا', 'ب', 'ج', 'د', 'ذ', 'ت', 'ث', 'س', 'ش', 'ز', 'ر', 'ض', 'ص', 'ق', 'ف', 'ع', 'غ', 'ه', 'خ', 'ح', 'ن', 'ل', 'م', 'ك', 'ط', 'و' };
@@ -42,14 +43,14 @@ public class MazeLogic : MonoBehaviour
     private float totalDistance = 0;
     private float neededTime = 0;
 
-    void Start()
+    public void Start()
     {
         ChooseItemToLearn();
         SetUpScene();
         StartCoroutine(Timer());
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
     }
-    void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -60,11 +61,15 @@ public class MazeLogic : MonoBehaviour
     void ChooseItemToLearn()
     {
         var usedItems = ProgressManager.Instance.GetIMazeItemsToLearn();
+        print(usedItems.Count);
+        print(Items.RandomCombinedList.Count);
 
         if (usedItems.Count == Items.RandomCombinedList.Count)
             Item = Items.RandomCombinedList[new System.Random().Next(usedItems.Count)];
         else
-            Item = Items.RandomCombinedList[usedItems.Count == 0 ? 0 : usedItems.Count - 1];
+            Item = Items.RandomCombinedList[usedItems.Count];
+        var material = FloorMeshMap.material;
+        material.SetTexture("_MainTex", Resources.Load<Texture2D>("FloorMazes/" + Item.EnName));
     }
 
     float GetPathRemainingDistance()
@@ -93,7 +98,7 @@ public class MazeLogic : MonoBehaviour
             }
             wrongChars.Add(wrongChar);
             chars.Add(c);
-            foundChars.Add(false);
+            foundChars.Add('0');
         }
         foreach (var c in Item.FrName)
         {
@@ -104,7 +109,7 @@ public class MazeLogic : MonoBehaviour
             }
             wrongChars.Add(wrongChar);
             chars.Add(c);
-            foundChars.Add(false);
+            foundChars.Add('0');
         }
         foreach (var c in Item.EnName)
         {
@@ -115,7 +120,7 @@ public class MazeLogic : MonoBehaviour
             }
             wrongChars.Add(wrongChar);
             chars.Add(c);
-            foundChars.Add(false);
+            foundChars.Add('0');
         }
     }
     void CalculateShortPath()
@@ -201,6 +206,7 @@ public class MazeLogic : MonoBehaviour
         var index = GetFoundCharIndex(obj.GetComponent<MazeText>().GetChar());
         if (index > -1)
         {
+            SoundManager.Instance.PlayEffects("Collect2");
             UITexts[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
             if (!StillCharsToFind())
             {
@@ -214,29 +220,31 @@ public class MazeLogic : MonoBehaviour
     }
     void MazeCompleted()
     {
+        SoundManager.Instance.PlayEffects("Tada");
         ProgressManager.Instance.AddMazeItemToLearn(Item.EnName);
         ProgressManager.Instance.AddCompletedMaze(
            int.Parse(SceneManager.GetActiveScene().name.Substring(4)) + 1 + ":0");
-        GameManager.Instance.SwitchScene("MazeChoice");
+        StartCoroutine(Wait(3, () => { GameManager.Instance.SwitchScene("MazeChoice"); }));
     }
     int GetFoundCharIndex(char c)
     {
         if (chars.Contains(c))
         {
             var index = chars.IndexOf(c);
-            while (foundChars[index])
+            while (foundChars[index] != '0')
                 index = chars.IndexOf(c, index + 1);
-            foundChars[index] = true;
+            foundChars[index] = c;
             return index;
         }
         return -1;
     }
     bool StillCharsToFind()
     {
-        return foundChars.Contains(false);
+        return foundChars.Contains('0');
     }
     void DecrementHeart()
     {
+        SoundManager.Instance.PlayEffects("BadCollect");
         var heartsNumber = Hearts.transform.childCount - 1;
         Destroy(Hearts.transform.GetChild(heartsNumber).gameObject);
         if (heartsNumber == 0)
@@ -261,4 +269,20 @@ public class MazeLogic : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
     }
+    IEnumerator Wait(float seconds, LambdaArgument lambda)
+    {
+        yield return new WaitForSeconds(seconds);
+        lambda();
+    }
+    delegate void LambdaArgument();
+    string AreAllCharsOfNameFound(string name)
+    {
+
+        return "";
+    }
+}
+
+class CharsManagement
+{
+
 }
