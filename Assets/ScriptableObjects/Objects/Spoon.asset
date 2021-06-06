@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Spoon
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: Spoon
   ArName: "\u0645\u0644\u0639\u0642\u0629"
   FrName: "Cuill\xE8re"
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 1545127944762756, guid: 32cf7cb5324804148862798ee1f49df8,
-    type: 3}

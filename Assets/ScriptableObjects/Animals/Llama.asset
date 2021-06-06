@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Llama
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Llama
   ArName: "\u0644\u0627\u0645\u0627"
   FrName: Lama
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 7725415189342734688, guid: 97896a0e3803df240b1d2122c6213967,
-    type: 3}

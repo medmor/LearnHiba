@@ -6,6 +6,7 @@ public class SwitchSceneClick : MonoBehaviour
 
     public void SwitchScene(string SceneName)
     {
+        SoundManager.Instance.PlayEffects("Click");
         GameManager.Instance.SwitchScene(SceneName);
     }
 }

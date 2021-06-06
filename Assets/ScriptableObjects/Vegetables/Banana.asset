@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Banana
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Banana
   ArName: "\u0645\u0648\u0632\u0629"
   FrName: Banane
-  EnAudio: {fileID: 8300000, guid: fb10a32ee88c0334599da278f616cf97, type: 3}
-  FrAudio: {fileID: 8300000, guid: 43a9de9eac18cb0478a708d8c70b9583, type: 3}
-  ArAudio: {fileID: 8300000, guid: da27ed295b9e92b4192a9376b8c03907, type: 3}
-  prefabObject: {fileID: 1407451490957870, guid: 3ce32ffa6ccf60e4ab65d9e396f43433,
-    type: 3}

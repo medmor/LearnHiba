@@ -1,15 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MazeLogic : MonoBehaviour
 {
-    public Transform StartPos;
-    public Transform GoalPos;
 
     public ItemsToLearnLists Items;
     [HideInInspector]
@@ -20,34 +16,45 @@ public class MazeLogic : MonoBehaviour
     public GameObject textPerph;
     public GameObject wrongTextPerph;
 
-    public TMPro.TextMeshProUGUI TimerText;
-
     public GameObject ArTextSlotPref;
     public GameObject EnTextSlotPref;
-    public Transform ArUITextContainer;
-    public Transform FrUITextContainer;
-    public Transform EnUITextContainer;
+    public UITextContainer ArUITextContainer;
+    public UITextContainer FrUITextContainer;
+    public UITextContainer EnUITextContainer;
     public GameObject Hearts;
-    public Renderer FloorMeshMap;
+
+    public StarsContainer StarsContainer;
+
+    public Material FloorMaterial;
+
+    private Transform StartPos;
+    private Transform GoalPos;
 
     private readonly List<char> chars = new List<char>();
     private readonly List<char> foundChars = new List<char>();
     private readonly List<char> wrongChars = new List<char>();
-    private readonly List<GameObject> UITexts = new List<GameObject>();
+    private readonly List<GameObject> UIChars = new List<GameObject>();
     private readonly List<char> allChars = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'ا', 'ب', 'ج', 'د', 'ذ', 'ت', 'ث', 'س', 'ش', 'ز', 'ر', 'ض', 'ص', 'ق', 'ف', 'ع', 'غ', 'ه', 'خ', 'ح', 'ن', 'ل', 'م', 'ك', 'ط', 'و' };
 
     private readonly List<Vector3> charsPositions = new List<Vector3>();
     private readonly List<Vector3> wrongCharsPositions = new List<Vector3>();
+    private bool[] foundNames = new bool[] { false, false, false };
 
     private NavMeshPath shortPath = default;
     private float totalDistance = 0;
-    private float neededTime = 0;
 
     public void Start()
     {
+        Instantiate(Resources.Load<GameObject>("Maze/Levels/" + GameManager.Instance.CurrentMaze));
+        GoalPos = GameObject.Find(GameManager.Instance.CurrentMaze + "(Clone)/Goal").transform;
+        StartPos = GameObject.Find(GameManager.Instance.CurrentMaze + "(Clone)/Start").transform;
+        agent.gameObject.transform.position = StartPos.position;
+        agent.transform.position = StartPos.position;
+
         ChooseItemToLearn();
+
         SetUpScene();
-        StartCoroutine(Timer());
+
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
     }
     public void Update()
@@ -61,30 +68,21 @@ public class MazeLogic : MonoBehaviour
     void ChooseItemToLearn()
     {
         var usedItems = ProgressManager.Instance.GetIMazeItemsToLearn();
-        print(usedItems.Count);
-        print(Items.RandomCombinedList.Count);
 
         if (usedItems.Count == Items.RandomCombinedList.Count)
             Item = Items.RandomCombinedList[new System.Random().Next(usedItems.Count)];
         else
             Item = Items.RandomCombinedList[usedItems.Count];
-        var material = FloorMeshMap.material;
-        material.SetTexture("_MainTex", Resources.Load<Texture2D>("FloorMazes/" + Item.EnName));
+        var material = GameObject.Find(GameManager.Instance.CurrentMaze + "(Clone)/Map/Floor").GetComponent<Renderer>().material;// FloorMeshMap.material;
+        material.SetTexture("_MainTex", Resources.Load<Texture2D>("Maze/Floors/" + Item.EnName));
     }
-
     float GetPathRemainingDistance()
     {
-        if (agent.pathPending ||
-            agent.pathStatus == NavMeshPathStatus.PathInvalid ||
-            agent.path.corners.Length == 0)
-            return -1f;
-
         float distance = 0.0f;
-        for (int i = 0; i < agent.path.corners.Length - 1; ++i)
+        for (int i = 0; i < shortPath.corners.Length - 1; ++i)
         {
-            distance += Vector3.Distance(agent.path.corners[i], agent.path.corners[i + 1]);
+            distance += Vector3.Distance(shortPath.corners[i], shortPath.corners[i + 1]);
         }
-
         return distance;
     }
     void SetChars()
@@ -127,8 +125,6 @@ public class MazeLogic : MonoBehaviour
     {
         shortPath = new NavMeshPath();
         agent.CalculatePath(GoalPos.position, shortPath);
-        agent.SetPath(shortPath);
-        agent.isStopped = true;
     }
     void SetCharsPositions()
     {
@@ -165,25 +161,6 @@ public class MazeLogic : MonoBehaviour
             var txt = Instantiate(textPerph);
             txt.transform.position = charsPositions[i] + Vector3.up * .05f;
             txt.GetComponent<MazeText>().SetTexts(chars[i].ToString());
-
-            if (i < Item.ArName.Length)
-            {
-                txt = Instantiate(ArTextSlotPref);
-                txt.transform.SetParent(ArUITextContainer);
-            }
-            else if (i < Item.ArName.Length + Item.FrName.Length)
-            {
-                txt = Instantiate(EnTextSlotPref);
-                txt.transform.SetParent(FrUITextContainer);
-            }
-            else
-            {
-                txt = Instantiate(EnTextSlotPref);
-                txt.transform.SetParent(EnUITextContainer);
-            }
-            txt.GetComponentInChildren<TextMeshProUGUI>().text = chars[i].ToString();
-            UITexts.Add(txt);
-
             if (i < wrongCharsPositions.Count)
             {
                 txt = Instantiate(wrongTextPerph);
@@ -191,6 +168,9 @@ public class MazeLogic : MonoBehaviour
                 txt.GetComponent<MazeText>().SetTexts(wrongChars[i].ToString());
             }
         }
+        ArUITextContainer.SpawnUIChars(Item.ArName, UIChars);
+        FrUITextContainer.SpawnUIChars(Item.FrName, UIChars);
+        EnUITextContainer.SpawnUIChars(Item.EnName, UIChars);
     }
     void SetUpScene()
     {
@@ -207,23 +187,61 @@ public class MazeLogic : MonoBehaviour
         if (index > -1)
         {
             SoundManager.Instance.PlayEffects("Collect2");
-            UITexts[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
-            if (!StillCharsToFind())
-            {
-                MazeCompleted();
-            }
+            CheckFoundNames();
+            UIChars[index].GetComponent<Image>().color = new Color(0, 1, 0, .5f);
         }
         else
         {
             DecrementHeart();
         }
     }
+    void CheckFoundNames()
+    {
+        for (var i = 0; i < foundNames.Length; i++)
+        {
+            if (!foundNames[i])
+                if (!string.IsNullOrWhiteSpace(
+                    AreAllCharsOfNameFound(i == 0 ? Item.ArName : i == 1 ? Item.FrName : Item.EnName)
+                    ))
+                {
+                    foundNames[i] = true;
+                    SoundManager.Instance.PlayEffects("Tada");
+                    var sound = Resources.Load<AudioClip>("Audios/" + Item.Type + "/" + Item.EnName +
+                        (i == 0 ? "/Ar" : i == 1 ? "/Fr" : "/En")
+                        + Item.EnName);
+                    StartCoroutine(Wait(SoundManager.Instance.SoundLength("Tada"), () =>
+                    {
+                        SoundManager.Instance.PlayNames(sound);
+                        StartCoroutine(Wait(sound.length + .5f,
+                            () =>
+                            {
+                                SoundManager.Instance.PlayNames(sound);
+                                if (!StillCharsToFind())
+                                {
+                                    StartCoroutine(Wait(sound.length + 1f, () => MazeCompleted()));
+                                }
+                            }
+                            ));
+                    }));
+                    return;
+                }
+        }
+
+    }
     void MazeCompleted()
     {
-        SoundManager.Instance.PlayEffects("Tada");
+        SoundManager.Instance.PlayEffects("Win");
         ProgressManager.Instance.AddMazeItemToLearn(Item.EnName);
+        var starsNumber = 3;
+        if (GameObject.Find("/MazeUI/Timer").GetComponent<MazeTimer>().IsTimeDone())
+            starsNumber--;
+        if (Hearts.transform.childCount < 3)
+            starsNumber--;
+        StarsContainer.SpawnStars(starsNumber);
+        StarsContainer.Tween();
         ProgressManager.Instance.AddCompletedMaze(
-           int.Parse(SceneManager.GetActiveScene().name.Substring(4)) + 1 + ":0");
+           int.Parse(GameManager.Instance.CurrentMaze.Substring(4)) + ":" + starsNumber
+           );
         StartCoroutine(Wait(3, () => { GameManager.Instance.SwitchScene("MazeChoice"); }));
     }
     int GetFoundCharIndex(char c)
@@ -251,38 +269,36 @@ public class MazeLogic : MonoBehaviour
             GameManager.Instance.SwitchScene("gameover");
 
     }
-    void CalculateNeededTime()
+    float CalculateNeededTime()
     {
-        neededTime = totalDistance * agent.speed * 10;
+        return totalDistance * agent.speed * 10;
     }
-    IEnumerator Timer()
-    {
-        while (neededTime > 0)
-        {
-            System.TimeSpan t = System.TimeSpan.FromSeconds(neededTime);
 
-            string answer = string.Format("{0:D2}.{1:D2}",
-                            t.Minutes,
-                            t.Seconds);
-            neededTime -= 1f;
-            TimerText.text = answer;
-            yield return new WaitForSeconds(1f);
-        }
-    }
     IEnumerator Wait(float seconds, LambdaArgument lambda)
     {
         yield return new WaitForSeconds(seconds);
         lambda();
     }
     delegate void LambdaArgument();
+
     string AreAllCharsOfNameFound(string name)
     {
+        for (var i = 0; i < foundChars.Count; i++)
+        {
+            if (name[0] == foundChars[i])
+            {
+                var j = 1;
+                while (j < name.Length && name[j] == foundChars[i + j])
+                {
+                    j++;
+                }
+                if (j == name.Length)
+                    return name;
+            }
+        }
 
         return "";
     }
-}
-
-class CharsManagement
-{
 
 }
+

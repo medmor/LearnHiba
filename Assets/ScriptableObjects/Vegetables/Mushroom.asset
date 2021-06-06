@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Mushroom
   ArName: "\u0641\u0637\u0631"
   FrName: Champignon
-  EnAudio: {fileID: 8300000, guid: 00f7bad846d551a43b8a1937cd8e50d4, type: 3}
-  FrAudio: {fileID: 8300000, guid: 3d7b16ee3223fae47ab82e4c8cd0d4ca, type: 3}
-  ArAudio: {fileID: 8300000, guid: 4da20e575000a6a46881a3d3a200e739, type: 3}
-  prefabObject: {fileID: 1000011395917184, guid: 630adda25e718324a80512d3e4d69e13,
-    type: 3}

@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Bed
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: Bed
   ArName: "\u0633\u0631\u064A\u0631"
   FrName: Lit
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 5347212975644591725, guid: 7efd0dc425e9cd34383021504183677a,
-    type: 3}

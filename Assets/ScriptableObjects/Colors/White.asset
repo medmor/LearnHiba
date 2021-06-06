@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: White
   m_EditorClassIdentifier: 
+  Type: Colors
   EnName: White
   ArName: "\u0623\u0628\u064A\u0636"
   FrName: Blanc
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 957544363279744087, guid: e86668b9051b6bf40a1558cd0537b00a,
-    type: 3}

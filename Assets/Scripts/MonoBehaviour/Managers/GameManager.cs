@@ -1,13 +1,11 @@
-﻿using ArabicSupport;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Manager<GameManager>
 {
     public GameObject[] SystemPrefabs;
-    
+    public string CurrentMaze { get; set; } = "Maze6";
+
 
     void Start()
     {
@@ -15,15 +13,18 @@ public class GameManager : Manager<GameManager>
     }
     void InstantiateSystemPrefabs()
     {
-        GameObject prefabInstance;
         for (int i = 0; i < SystemPrefabs.Length; ++i)
         {
-            prefabInstance = Instantiate(SystemPrefabs[i]);
+            Instantiate(SystemPrefabs[i]);
         }
     }
 
     public void SwitchScene(string name)
     {
+        if (name == "Maze" || name == "NamesLearn")
+            SoundManager.Instance.PlayMusic(SoundManager.Instance.Musics[Random.Range(0, SoundManager.Instance.Musics.Count)].name);
+        else
+            SoundManager.Instance.StopMusicAudioSource();
         SceneManager.LoadScene(name);
     }
 

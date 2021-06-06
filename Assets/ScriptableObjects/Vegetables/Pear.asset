@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Pear
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Pear
   ArName: "\u0625\u062C\u0627\u0635"
   FrName: Poire
-  EnAudio: {fileID: 8300000, guid: ac248e130af952f4589d8f3181c2f4bf, type: 3}
-  FrAudio: {fileID: 8300000, guid: d216f352109b34447b70cfa455ca0b98, type: 3}
-  ArAudio: {fileID: 8300000, guid: 6ddee2104fc15df44ae7ecaa91796118, type: 3}
-  prefabObject: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017,
-    type: 3}

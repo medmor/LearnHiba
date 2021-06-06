@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boot.unity
     guid: 97525051668390b40a4bd49026a437f5
-  - enabled: 0
-    path: 
-    guid: 56837229f939ba942ab382c7436297a2
+  - enabled: 1
+    path: Assets/Scenes/NamesLearn/NamesLearnChoices.unity
+    guid: 9dd3e7adf54e918468ce884600ca73a9
   - enabled: 1
     path: Assets/Scenes/NamesLearn/NamesLearn.unity
     guid: 47cd513b8c4397e4ca272a1ff269d933
@@ -18,30 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Mazes/MazeChoice.unity
     guid: 092df3c78c3e54f40b10a902a86631b2
   - enabled: 1
-    path: Assets/Scenes/Mazes/Maze1.unity
-    guid: c6245fdd9ab032c46a878d4d8a1a9974
-  - enabled: 1
-    path: Assets/Scenes/Mazes/Maze2.unity
-    guid: 4888b72620ca1c34780e19dba7e23e1a
-  - enabled: 1
-    path: Assets/Scenes/Mazes/Maze4.unity
-    guid: 75de1cf74e5949c468a509fe5350fcd8
-  - enabled: 1
-    path: Assets/Scenes/Mazes/Maze3.unity
-    guid: 4e7e3ec8bf5b9a14f8fb8ec653f98efe
-  - enabled: 1
-    path: Assets/Scenes/Mazes/Maze5.unity
-    guid: 4f1322002889e4447bc4745a0b8a2ef5
+    path: Assets/Scenes/Mazes/Maze.unity
+    guid: 19818e7d6c28cf64ebc3b54006140f37
   - enabled: 1
     path: Assets/Scenes/Gameover.unity
     guid: c3549af0f53fc414bbe98214a3e7ef51
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 6b72bb15e2e63ce49a7bf492b744e28d
-  - enabled: 1
-    path: Assets/Scenes/NamesLearn/NamesLearnChoices.unity
-    guid: 9dd3e7adf54e918468ce884600ca73a9
-  - enabled: 1
-    path: Assets/Scenes/Mazes/Maze6.unity
-    guid: dd9ec5bfc11c7a941b2edf1790e2090a
   m_configObjects: {}

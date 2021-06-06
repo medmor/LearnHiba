@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Monkey
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Monkey
   ArName: "\u0642\u0631\u062F"
   FrName: Singe
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 1047453343684248892, guid: f7c2b7847074aca46918560cc553de57,
-    type: 3}

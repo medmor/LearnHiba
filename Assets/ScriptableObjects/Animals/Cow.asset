@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Cow
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Cow
   ArName: "\u0628\u0642\u0631\u0629"
   FrName: Vache
-  EnAudio: {fileID: 8300000, guid: 40dd1c3d86c1490458be8bfac9f83a36, type: 3}
-  FrAudio: {fileID: 8300000, guid: 06579991a3e5d6c438f8e062805f7f75, type: 3}
-  ArAudio: {fileID: 8300000, guid: 4395563fd4dbfcd4ca2cedb58da8e024, type: 3}
-  prefabObject: {fileID: 907391100237927971, guid: 5d45eb65ccad78747bb39d0262af7c00,
-    type: 3}

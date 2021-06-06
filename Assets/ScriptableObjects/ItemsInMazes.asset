@@ -15,10 +15,17 @@ MonoBehaviour:
   Animals:
   - {fileID: 11400000, guid: 52558a0dd3e5d5c4ebfb9fdc589add8e, type: 2}
   - {fileID: 11400000, guid: b39add8f5887fdc47a883bbdea2980c1, type: 2}
+  - {fileID: 11400000, guid: 637b08aae27c19042875fe5e7dafc6d0, type: 2}
+  - {fileID: 11400000, guid: 65c354e5bb0797147a78f4dbab1a6aa1, type: 2}
+  - {fileID: 11400000, guid: 9c68d8de745ce3640b51b990a5d995ab, type: 2}
+  - {fileID: 11400000, guid: 6c4141e2215f8b341abbf15fbd0d9d00, type: 2}
   Vegetables:
   - {fileID: 11400000, guid: 92becd707971c7d4f902599875d5cb18, type: 2}
   - {fileID: 11400000, guid: 13a4c11c3c6c7f2478595d779e71f0b7, type: 2}
   - {fileID: 11400000, guid: d5871bc4a03390045879cce5eca0fcb8, type: 2}
+  - {fileID: 11400000, guid: c8f203d79bfa5b84f83459d4dcd17c0a, type: 2}
+  - {fileID: 11400000, guid: c99eeb67481831a41b440ee22b666693, type: 2}
+  - {fileID: 11400000, guid: 513a1a2a8c5019f46b7fcf57ef8a5d16, type: 2}
   CurrentList: []
   ObjectUrl: 
   AudioUrl: 

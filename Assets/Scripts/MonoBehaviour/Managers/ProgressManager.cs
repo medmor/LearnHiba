@@ -27,9 +27,17 @@ public class ProgressManager : Manager<ProgressManager>
 
     public void AddCompletedMaze(string completedMaze)
     {
-        if (MazeProgress.Contains(completedMaze))
-            return;
-        MazeProgress.Add(completedMaze);
+
+        var index = MazeProgress.FindIndex(c => c.Split(':')[0] == completedMaze.Split(':')[0]);
+
+        if (index != -1)
+        {
+            MazeProgress[index] = completedMaze;
+        }
+        else
+        {
+            MazeProgress.Add(completedMaze);
+        }
         SetMazeProgress();
     }
 
@@ -49,19 +57,25 @@ public class ProgressManager : Manager<ProgressManager>
         return mazeNumber > int.Parse(MazeProgress[MazeProgress.Count - 1].Split(':')[0]);
     }
 
+    public int GetMazeStars(string mazeNumber)
+    {
+        var maze = MazeProgress.Find(c => c.Split(':')[0] == mazeNumber);
+        return int.Parse(maze.Split(':')[1]);
+    }
+
     public void AddMazeItemToLearn(string item)
     {
-        this.MazeItemsToLearn.Add(item);
+        MazeItemsToLearn.Add(item);
     }
 
     public List<string> GetIMazeItemsToLearn()
     {
-        return this.MazeItemsToLearn;
+        return MazeItemsToLearn;
     }
 
     public void ResetMazeItmsToLearn()
     {
-        this.MazeItemsToLearn.Clear();
+        MazeItemsToLearn.Clear();
     }
 
 

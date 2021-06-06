@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Avocado
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Avocado
   ArName: "\u0623\u0641\u0648\u0643\u0627\u062F\u0648"
   FrName: Avocat
-  EnAudio: {fileID: 8300000, guid: 21a9281a99276724dae26ff678dc0419, type: 3}
-  FrAudio: {fileID: 8300000, guid: 76cb5465242b2424499d7ea7aee58be9, type: 3}
-  ArAudio: {fileID: 8300000, guid: 08e88a39e5ec6e64e96846aa0ad36bae, type: 3}
-  prefabObject: {fileID: 1000010759889362, guid: 3245fc5926a7535429f2989cab01a844,
-    type: 3}

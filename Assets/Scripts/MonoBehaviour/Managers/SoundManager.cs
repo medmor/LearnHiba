@@ -7,10 +7,11 @@ public class SoundManager : Manager<SoundManager>
     public AudioSource NamesAudioSource;
     public AudioSource EffectsAudioSource;
     public List<AudioClip> SoundsEffects;
+    public List<AudioClip> Musics;
 
     void Start()
     {
-        NamesAudioSource = GetComponent<AudioSource>();
+        MusicAudioSource.volume = .1f;
     }
 
     public void PlayNames(AudioClip clip)
@@ -21,8 +22,15 @@ public class SoundManager : Manager<SoundManager>
     public void PlayEffects(string sound)
     {
         StopEffectsAudioSource();
-        var clip = this.SoundsEffects.Find(s => s.name == sound);
+        var clip = SoundsEffects.Find(s => s.name == sound);
         EffectsAudioSource.PlayOneShot(clip);
+    }
+
+    public void PlayMusic(string clip)
+    {
+        MusicAudioSource.clip = Musics.Find(c => c.name == clip);
+        MusicAudioSource.loop = true;
+        MusicAudioSource.Play();
     }
     public void StopAll()
     {
@@ -48,5 +56,9 @@ public class SoundManager : Manager<SoundManager>
     public bool IsNamesAudioSource()
     {
         return NamesAudioSource.isPlaying;
+    }
+    public float SoundLength(string sound)
+    {
+        return SoundsEffects.Find(s => s.name == sound).length;
     }
 }

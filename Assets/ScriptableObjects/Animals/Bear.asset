@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Bear
   ArName: "\u062F\u0628"
   FrName: Ourse

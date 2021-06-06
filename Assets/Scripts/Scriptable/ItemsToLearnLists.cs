@@ -14,7 +14,7 @@ public class ItemsToLearnLists : ScriptableObject
     [HideInInspector]
     public List<ItemToLearn> RandomCombinedList {
         get {
-            if (randomCombinedList.Count == 0)
+            if (randomCombinedList == null || randomCombinedList.Count == 0)
             {
                 var r = new System.Random();
                 randomCombinedList = Animals.Concat(Vegetables).OrderBy(i => r.Next()).ToList();

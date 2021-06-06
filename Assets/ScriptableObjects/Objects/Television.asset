@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Television
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: Television
   ArName: "\u062A\u0644\u0641\u0627\u0632"
   FrName: Television
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 7000360977768757604, guid: 32544d36ae6ca464e84c8404464647eb,
-    type: 3}

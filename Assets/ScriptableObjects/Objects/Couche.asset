@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Couche
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: Sofa
   ArName: "\u0623\u0631\u064A\u0643\u0629"
   FrName: "Canap\xE9"
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 3396820818931168557, guid: a6bd7551882fe2c42ae9fc0051a12afe,
-    type: 3}

@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Onion
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Onion
   ArName: "\u0628\u0635\u0644\u0629"
   FrName: Oignon
-  EnAudio: {fileID: 8300000, guid: 8672acc0b341402449c2083715f923a9, type: 3}
-  FrAudio: {fileID: 8300000, guid: bd48ec21fe686b14c8adbddaf05d24e0, type: 3}
-  ArAudio: {fileID: 8300000, guid: e968b01501d5bf647ac130e30aca6eb3, type: 3}
-  prefabObject: {fileID: 1067201021930494, guid: 097013ceeb8052648be3891c0984df9a,
-    type: 3}
