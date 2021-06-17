@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Strawberry
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Strawberry
   ArName: "\u0641\u0631\u0627\u0648\u0644\u0629"
   FrName: Fraise
-  EnAudio: {fileID: 8300000, guid: 806119f89da176846a61c170933b492f, type: 3}
-  FrAudio: {fileID: 8300000, guid: f0bd1c6382426f74a915a91b68f8c7bc, type: 3}
-  ArAudio: {fileID: 8300000, guid: 52384da8e1594f84e94b063efe1d255a, type: 3}
-  prefabObject: {fileID: 1724972533694550, guid: 63e523ab5d9ce7348b431ae1d689a54d,
-    type: 3}

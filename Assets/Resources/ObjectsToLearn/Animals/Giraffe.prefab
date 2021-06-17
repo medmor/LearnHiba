@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1877971451789005245}
+  - component: {fileID: 8960975948737450749}
   m_Layer: 0
   m_Name: Giraffe
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244178467768306439}
   m_LocalRotation: {x: 0.0069236294, y: 0.9655801, z: -0.02583933, w: 0.25872648}
-  m_LocalPosition: {x: -0.040243268, y: -4.486331, z: 0.06970325}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 3655578137361053991}
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.066, y: 150, z: 0}
+--- !u!65 &8960975948737450749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244178467768306439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5544506, y: 7.6497645, z: 6.0027695}
+  m_Center: {x: 0.11112103, y: 0.50282115, z: 0.38300413}
 --- !u!1 &3414224128960831558
 GameObject:
   m_ObjectHideFlags: 0

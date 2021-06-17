@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4785770825739254}
   - component: {fileID: 33317395272862110}
   - component: {fileID: 23272747751323546}
-  - component: {fileID: 1149753862306278186}
-  - component: {fileID: 6363711941994495342}
+  - component: {fileID: -6847095376245821756}
   m_Layer: 0
   m_Name: cherries
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1149753862306278186
-SphereCollider:
+--- !u!65 &-6847095376245821756
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,17 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.008039721
+  m_Size: {x: 0.014578922, y: 0.012921389, z: 0.016079443}
   m_Center: {x: -0.00038395223, y: -0.00029923825, z: -2.2319896e-11}
---- !u!114 &6363711941994495342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802840387486672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b350680a6f019a34e8ae32a2385c5dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

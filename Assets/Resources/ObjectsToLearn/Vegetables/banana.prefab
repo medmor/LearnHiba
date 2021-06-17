@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4237270380712220}
   - component: {fileID: 33630388730842040}
   - component: {fileID: 23874901463228454}
-  - component: {fileID: 7920704186899468973}
-  - component: {fileID: 5708163557334552655}
+  - component: {fileID: 6786041219166436959}
   m_Layer: 0
   m_Name: banana
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7920704186899468973
-SphereCollider:
+--- !u!65 &6786041219166436959
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,17 +93,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.0074214106
+  m_Size: {x: 0.014319027, y: 0.010550384, z: 0.014842821}
   m_Center: {x: -0.0012692912, y: 0.0009908597, z: 0}
---- !u!114 &5708163557334552655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407451490957870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b350680a6f019a34e8ae32a2385c5dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

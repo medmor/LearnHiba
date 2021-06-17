@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: carrot
   ArName: "\u062C\u0632\u0631\u0629"
   FrName: carotte
-  EnAudio: {fileID: 8300000, guid: c4945cdfc4773b44d9f65ebcc8efdb84, type: 3}
-  FrAudio: {fileID: 8300000, guid: d6ef8164f6bc49c41a42d55cc45d134a, type: 3}
-  ArAudio: {fileID: 8300000, guid: 28cb257a4f7a6234abfad519e3d47ce6, type: 3}
-  prefabObject: {fileID: 5220822485397591644, guid: b5d824f8f897fa44181bf90e2091a3de,
-    type: 3}

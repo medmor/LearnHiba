@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: SweetPepper
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Sweet Pepper
   ArName: "\u0641\u0644\u0641\u0644 \u062D\u0644\u0648"
   FrName: Poivron
-  EnAudio: {fileID: 8300000, guid: 60874883d42992b44adbe75d10cfcab9, type: 3}
-  FrAudio: {fileID: 8300000, guid: 1ca24cfa5fae9204f837c4c214ab636a, type: 3}
-  ArAudio: {fileID: 8300000, guid: a93abc3acc47fd14f9c9c1230ee547e4, type: 3}
-  prefabObject: {fileID: 1000013808630610, guid: eae0d75f8edbe3349b65105f0c6b5665,
-    type: 3}

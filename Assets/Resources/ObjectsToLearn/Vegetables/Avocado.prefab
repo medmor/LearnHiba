@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4000012085495394}
   - component: {fileID: 33000011533360408}
   - component: {fileID: 23000012382687454}
+  - component: {fileID: 949591851156073500}
   m_Layer: 0
   m_Name: Avocado
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000010759889362}
   m_LocalRotation: {x: -0.19134171, y: -0.46193978, z: 0.33141357, w: 0.8001032}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &949591851156073500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010759889362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15694645, y: 0.046352725, z: 0.09013955}
+  m_Center: {x: 8.326673e-17, y: 0.0000000027939684, z: 2.4980018e-16}

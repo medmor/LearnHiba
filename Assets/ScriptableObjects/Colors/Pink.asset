@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Pink
   m_EditorClassIdentifier: 
+  Type: Colors
   EnName: Pink
   ArName: "\u0648\u0631\u062F\u064A"
   FrName: Rose
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 4450521293944015173, guid: 315d68215bd93934a9959c56566052e8,
-    type: 3}

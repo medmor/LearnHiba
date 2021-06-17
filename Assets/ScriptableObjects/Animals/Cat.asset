@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Cat
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Cat
   ArName: "\u0642\u0637"
   FrName: Chat
-  EnAudio: {fileID: 8300000, guid: 0d4307845b4cd0845b3a0f9482ccb612, type: 3}
-  FrAudio: {fileID: 8300000, guid: 0289b7dbbee772942ac16a11f58003fa, type: 3}
-  ArAudio: {fileID: 8300000, guid: 9e3031f2c047b2f469b06d90e59daee8, type: 3}
-  prefabObject: {fileID: 1947059520887877653, guid: 14ddd4a945923d845916ef56f148fb10,
-    type: 3}

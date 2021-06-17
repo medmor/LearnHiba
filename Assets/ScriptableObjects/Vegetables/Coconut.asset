@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Coconut
   m_EditorClassIdentifier: 
-  EnName: "\u0650Coconut"
+  Type: Vegetables
+  EnName: Coconut
   ArName: "\u062C\u0648\u0632 \u0627\u0644\u0647\u0646\u062F"
   FrName: Noix de coco
-  EnAudio: {fileID: 8300000, guid: d73a1d1eeef45d747adb8c2ff0b22fdb, type: 3}
-  FrAudio: {fileID: 8300000, guid: dbeac67fac111234ebdb747195e2e7ae, type: 3}
-  ArAudio: {fileID: 8300000, guid: b8674fefc4aa8d540a5ddca57d6f5c39, type: 3}
-  prefabObject: {fileID: 1000011038145264, guid: 45c7dddf851acbb4e94a8fc0ead66eed,
-    type: 3}

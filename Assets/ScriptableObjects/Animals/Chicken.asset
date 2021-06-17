@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Chicken
   m_EditorClassIdentifier: 
+  Type: Animals
   EnName: Chicken
   ArName: "\u062F\u062C\u0627\u062C\u0629"
   FrName: Poule
-  EnAudio: {fileID: 8300000, guid: aae2323ba742c9e45a0750447d3d6c06, type: 3}
-  FrAudio: {fileID: 8300000, guid: 77bf9b4048a16e842b91e97b805e8d61, type: 3}
-  ArAudio: {fileID: 8300000, guid: e9bc182b22187844f8baab6aa151a757, type: 3}

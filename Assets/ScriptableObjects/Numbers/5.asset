@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
+  Type: Numbers
   EnName: Five
   ArName: "\u062E\u0645\u0633\u0629"
   FrName: Cinq
-  EnAudio: {fileID: 8300000, guid: f1240decaa58b13418d956bc925b51e7, type: 3}
-  FrAudio: {fileID: 8300000, guid: 78bcd8a5a46128743856dd33d827096a, type: 3}
-  ArAudio: {fileID: 8300000, guid: 89b5e32db329c3b4d99d7e1ece518c4b, type: 3}
-  prefabObject: {fileID: 900576120073960212, guid: dc3cc85fab6388443bfbef3d88c0c2a7,
-    type: 3}

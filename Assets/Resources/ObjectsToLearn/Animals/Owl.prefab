@@ -254,6 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7721680583450408858}
+  - component: {fileID: 1248879020000892584}
   m_Layer: 0
   m_Name: Owl
   m_TagString: Untagged
@@ -269,10 +270,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6945460165515144480}
   m_LocalRotation: {x: 0.030335506, y: 0.92761075, z: -0.012169235, w: -0.37211558}
-  m_LocalPosition: {x: -0.10479046, y: -2.998462, z: -0.14398904}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4626710634392677912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 223.717, z: 3.746}
+--- !u!65 &1248879020000892584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945460165515144480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.7054393, z: 1.2160661}
+  m_Center: {x: -0.0000000034582017, y: 0.73965484, z: -0.10803262}

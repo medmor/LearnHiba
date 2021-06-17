@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: RollingPin
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: RollingPin
   ArName: "\u0634\u0648\u062A\u0643"
   FrName: "Rouleau \xE0 p\xE2tisserie"
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 1446545168157858, guid: 4097a285d710b744b9ff6cb685207bae,
-    type: 3}

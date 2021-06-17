@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Cherries
   m_EditorClassIdentifier: 
+  Type: Vegetables
   EnName: Cherries
   ArName: "\u0643\u0631\u0632"
   FrName: Cerises
-  EnAudio: {fileID: 8300000, guid: c0d31d2de782eda4bb848b88d1a55fc6, type: 3}
-  FrAudio: {fileID: 8300000, guid: 45495e23121d41c498bddb53150d03f6, type: 3}
-  ArAudio: {fileID: 8300000, guid: ec4aabe4742bcea438a2a08b1f6d7d08, type: 3}
-  prefabObject: {fileID: 1802840387486672, guid: 8f38e57a49b1c844081ad6bb3c553f13,
-    type: 3}

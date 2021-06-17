@@ -296,6 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691476601512264818}
+  - component: {fileID: 5427670677524555426}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -311,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031833361075822280}
   m_LocalRotation: {x: -0.0077563054, y: 0.89628583, z: -0.0031895929, w: -0.4433976}
-  m_LocalPosition: {x: 0.4182515, y: -3.4959853, z: 0.11099784}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 7766880127114138860}
@@ -319,6 +320,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.722, y: 232.64, z: -0.635}
+--- !u!65 &5427670677524555426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031833361075822280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7041175, y: 4.5268683, z: 8.804806}
+  m_Center: {x: 0.12621443, y: 2.1766183, z: 0.18089177}
 --- !u!1 &2289433951595647195
 GameObject:
   m_ObjectHideFlags: 0

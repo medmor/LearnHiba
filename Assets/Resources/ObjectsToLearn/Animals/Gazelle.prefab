@@ -1681,6 +1681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9170241775604239453}
+  - component: {fileID: 6917068294249450156}
   m_Layer: 0
   m_Name: Gazelle
   m_TagString: Untagged
@@ -1696,7 +1697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8361195369251919591}
   m_LocalRotation: {x: 0.0911204, y: -0.8589542, z: 0.109062456, w: 0.49193513}
-  m_LocalPosition: {x: 0.73102903, y: -4.889509, z: 0.27068752}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 284829715099638979}
@@ -1704,6 +1705,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.082, y: -120.814, z: -2.937}
+--- !u!65 &6917068294249450156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361195369251919591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7270124, y: 6.905173, z: 6.102676}
+  m_Center: {x: -0.27266607, y: 0.38222042, z: -0.28327668}
 --- !u!1 &8771253465257399543
 GameObject:
   m_ObjectHideFlags: 0

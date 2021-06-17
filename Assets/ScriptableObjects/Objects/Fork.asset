@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb665b1ec653cef4cb0ee72c3f145f6e, type: 3}
   m_Name: Fork
   m_EditorClassIdentifier: 
+  Type: Objects
   EnName: Fork
   ArName: "\u0634\u0648\u0643\u0629"
   FrName: Fourchette
-  EnAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  FrAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  ArAudio: {fileID: 8300000, guid: b13c1ca788eff2f41909b5b12616ba53, type: 3}
-  prefabObject: {fileID: 1995790241850536, guid: b540476b589f10f46abb067b58e9e698,
-    type: 3}
