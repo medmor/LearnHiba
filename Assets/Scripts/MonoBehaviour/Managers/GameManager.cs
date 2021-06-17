@@ -5,6 +5,7 @@ public class GameManager : Manager<GameManager>
 {
     public GameObject[] SystemPrefabs;
     public string CurrentMaze { get; set; } = "Maze6";
+    public bool HommeIntro = false;
 
 
     void Start()
@@ -17,6 +18,7 @@ public class GameManager : Manager<GameManager>
         {
             Instantiate(SystemPrefabs[i]);
         }
+        SoundManager.Instance.PlayEffects("Intro");
     }
 
     public void SwitchScene(string name)

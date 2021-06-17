@@ -12,6 +12,7 @@ public class ProgressManager : Manager<ProgressManager>
 
     public void Start()
     {
+        PlayerPrefs.DeleteAll();
         if (PlayerPrefs.HasKey(MazeProgressKey))
             MazeProgress = GetMazeProgress().Split(',').ToList();
         else

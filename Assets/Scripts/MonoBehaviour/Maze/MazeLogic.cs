@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -48,7 +49,7 @@ public class MazeLogic : MonoBehaviour
         Instantiate(Resources.Load<GameObject>("Maze/Levels/" + GameManager.Instance.CurrentMaze));
         GoalPos = GameObject.Find(GameManager.Instance.CurrentMaze + "(Clone)/Goal").transform;
         StartPos = GameObject.Find(GameManager.Instance.CurrentMaze + "(Clone)/Start").transform;
-        agent.gameObject.transform.position = StartPos.position;
+        agent.transform.position = StartPos.position;
         agent.transform.position = StartPos.position;
 
         ChooseItemToLearn();
@@ -57,13 +58,7 @@ public class MazeLogic : MonoBehaviour
 
         EventsManager.Instance.PlayerCollideWithChar.AddListener(OnPlayerCollideWhitheChar);
     }
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MazeCompleted();
-        }
-    }
+
 
     void ChooseItemToLearn()
     {
@@ -89,36 +84,28 @@ public class MazeLogic : MonoBehaviour
     {
         foreach (var c in Item.ArName)
         {
-            var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (Item.ArName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
-            {
-                wrongChar = allChars[Random.Range(0, allChars.Count)];
-            }
-            wrongChars.Add(wrongChar);
             chars.Add(c);
             foundChars.Add('0');
         }
         foreach (var c in Item.FrName)
         {
-            var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (Item.EnName.Contains(wrongChar.ToString()) || Item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
-            {
-                wrongChar = allChars[Random.Range(0, allChars.Count)];
-            }
-            wrongChars.Add(wrongChar);
             chars.Add(c);
             foundChars.Add('0');
         }
         foreach (var c in Item.EnName)
         {
+            chars.Add(c);
+            foundChars.Add('0');
+        }
+        for (var i = 0; i < chars.Count; i++)
+        {
             var wrongChar = allChars[Random.Range(0, allChars.Count)];
-            while (Item.EnName.Contains(wrongChar.ToString()) || Item.FrName.Contains(wrongChar.ToString()) || chars.Contains(wrongChar))
+            while (chars.Contains(char.ToUpper(wrongChar))
+                || chars.Contains(char.ToLower(wrongChar)))
             {
                 wrongChar = allChars[Random.Range(0, allChars.Count)];
             }
             wrongChars.Add(wrongChar);
-            chars.Add(c);
-            foundChars.Add('0');
         }
     }
     void CalculateShortPath()
@@ -215,9 +202,15 @@ public class MazeLogic : MonoBehaviour
                         StartCoroutine(Wait(sound.length + .5f,
                             () =>
                             {
+
                                 SoundManager.Instance.PlayNames(sound);
                                 if (!StillCharsToFind())
                                 {
+                                    agent.gameObject.GetComponent<PlayerMove>().enabled = false;
+                                    agent.isStopped = true;
+                                    GameObject.Find("/CamLight/Vcam").GetComponent<CinemachineVirtualCamera>().LookAt = null;
+                                    GameObject.Find("/CamLight/Vcam").GetComponent<CinemachineVirtualCamera>().Follow = null;
+                                    agent.transform.LookAt(GameObject.Find("/CamLight/Vcam").transform);
                                     StartCoroutine(Wait(sound.length + 1f, () => MazeCompleted()));
                                 }
                             }
@@ -232,6 +225,10 @@ public class MazeLogic : MonoBehaviour
     {
         SoundManager.Instance.PlayEffects("Win");
         ProgressManager.Instance.AddMazeItemToLearn(Item.EnName);
+
+        agent.gameObject.GetComponent<Animator>().SetTrigger("Jump");
+
+
         var starsNumber = 3;
         if (GameObject.Find("/MazeUI/Timer").GetComponent<MazeTimer>().IsTimeDone())
             starsNumber--;

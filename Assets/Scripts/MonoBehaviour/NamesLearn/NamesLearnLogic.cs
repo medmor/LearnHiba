@@ -1,5 +1,5 @@
-﻿using ArabicSupport;
-using UnityEngine;
+﻿using UnityEngine;
+
 
 public class NamesLearnLogic : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class NamesLearnLogic : MonoBehaviour
 
     public TextMesh EnName;
     public TextMesh FrName;
-    public TextMesh ArName;
+    public TMPro.TextMeshPro ArName;
     private GameObject objectToLearn;
 
     private Transform ClickableArea;
@@ -47,7 +47,15 @@ public class NamesLearnLogic : MonoBehaviour
 
         EnName.text = currentItem.EnName;
         FrName.text = currentItem.FrName;
-        ArName.text = ArabicFixer.Fix(currentItem.ArName);
+        ArName.isRightToLeftText = true;
+        ArName.text = ArabicSupport.ArabicFixer.Fix(currentItem.ArName);
+        ArName.text = Reverse(ArName.text);
+    }
+    public static string Reverse(string s)
+    {
+        char[] charArray = s.ToCharArray();
+        System.Array.Reverse(charArray);
+        return new string(charArray);
     }
 
     void RandomItemToLearn()
